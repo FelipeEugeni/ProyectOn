@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Armado de Ficha 1/</title>
+
+</head>
+
+<body>
+
+<div id="bg">
+
+  <div id="bg_up">
+
+    <div id="Encabezado"></div>
+
+    <div id="Texto">
+
+  <h1 class="Titulos">Armado de Ficha</h1>
+  <h1 class="Titulos">Primer Apartado</h1>
+
+    <h2 class="Titulos">Encabezado de Ficha</h2>
+
+    <p>En el encabezado de la ficha podemos encontrar los datos
+      más básicos del personaje y Jugador:<br>
+      -Nombre: será el nombre del personaje.<br>
+      -Jugador: nombre de la persona que jugará el personaje
+    </p>
+
+
+    <label for="Name">Nombre: </label><input id="Name"><br>
+    <label for="NamePlayer">Jugador: </label><input id="NamePlayer">
+
+    <h2 class="Titulos">Estadisticas:</h2>
+    <p>
+      Son aquellos atributos que tiene todo personaje de forma natural y son aquellas aptitudes que<br>
+      le entregan a nuestro heroe sus habilidades, sea tanto de conocimientos, combate, sociales,<br>
+      artísticas entre otras. Se pueden encontrar 9 tipos diferentes de Estadisticas<br>
+      Las cuales poseen un maximo de 5 niveles, los cuales se sumaran a la tirada de la habilidad o magia.<br>
+      Al comenzar nuestra aventura se le otorga al protagonista 10 puntos a repartir a eleccion,<br>
+      sin superar los 2 puntos al inicio.<br>
+      Las Estadisticas son:
+    </p>
+
+    <label>Puntos Restantes:</label><label>{{puntosEstadisticas}}</label>
+    <br>
+
+    <a href="#" routerLink="/Arcanismo"><button class="BotonGeneral">Arcanismo</button></a>
+
+    <label> {{puntosRepartidosEstadisticas.Arcanismo}}</label><label> /5 </label>
+    <button (click)="ModificarArcanismo(+1)" class="Suma"> - </button>
+    <button (click)="ModificarArcanismo(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Astucia"><button class="BotonGeneral">Astucia</button></a>
+    <label> {{puntosRepartidosEstadisticas.Astucia}}</label><label> /5 </label>
+    <button (click)="ModificarAstucia(+1)" class="Suma"> - </button>
+    <button (click)="ModificarAstucia(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Carisma"><button class="BotonGeneral">Carisma</button></a>
+    <label>  {{puntosRepartidosEstadisticas.Carisma}}</label><label> /5 </label>
+    <button (click)="ModificarCarisma(+1)" class="Suma"> - </button>
+    <button (click)="ModificarCarisma(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Destreza"><button class="BotonGeneral">Destreza</button></a>
+    <label>  {{puntosRepartidosEstadisticas.Destreza}}</label><label> /5 </label>
+    <button (click)="ModificarDestreza(+1)" class="Suma"> - </button>
+    <button (click)="ModificarDestreza(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Fuerza"><button class="BotonGeneral">Fuerza</button></a>
+    <label>  {{puntosRepartidosEstadisticas.Fuerza}}</label><label> /5 </label>
+    <button (click)="ModificarFuerza(+1)" class="Suma"> - </button>
+    <button (click)="ModificarFuerza(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Inteligencia"><button class="BotonGeneral">Inteligencia</button></a>
+    <label> {{puntosRepartidosEstadisticas.Inteligencia}}</label><label> /5 </label>
+    <button (click)="ModificarInteligencia(+1)" class="Suma"> - </button>
+    <button (click)="ModificarInteligencia(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Resistencia"><button class="BotonGeneral">Resistencia</button></a>
+    <label>  {{puntosRepartidosEstadisticas.Resistencia}}</label><label> /5 </label>
+    <button (click)="ModificarResistencia(+1)" class="Suma"> - </button>
+    <button (click)="ModificarResistencia(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Sabiduria"><button class="BotonGeneral">Sabiduría</button></a>
+    <label>  {{puntosRepartidosEstadisticas.Sabiduria}}</label><label> /5 </label>
+    <button (click)="ModificarSabiduria(+1)" class="Suma"> - </button>
+    <button (click)="ModificarSabiduria(-1)" class="Resta"> - </button>
+    <br>
+
+    <a href="#" routerLink="/Voluntad"><button class="BotonGeneral">Voluntad</button></a>
+    <label>  {{puntosRepartidosEstadisticas.Voluntad}}</label><label> /5 </label>
+    <button (click)="ModificarVoluntad(+1)" class="Suma"> - </button>
+    <button (click)="ModificarVoluntad(-1)" class="Resta"> - </button>
+    <br>
+
+    <h2 class="Titulos">Habilidades:</h2>
+
+    <p>
+      Una vez seleccionadas nuestras Estadisticas, pasamos a seleccionar las habilidades <br>
+      con las que contara nuestro Heroe. Como ya vimos en el paso anterior las habilidades van acorde con<br>
+      nuestras Estadisticas, ya que si no poseemos estas no podemos acceder a las Habilidades. <br>
+      En el apartado anterior, se pueden observar las Habilidades de cada Estadistica, te recomendamos <br>
+      volver a revisarla antes de seguir.<br>
+      Una ves ya decididos, vamos a repartir los puntos gratuitos, que en el caso de las Habilidades son 20.<br>
+      Al igual que en las Estadisticas, su nivel maximo es de 5 y no se puede superar los 2 puntos al inicio.
+      Recuerden que si poseen una Habilidad de una Estadistica que carecen no la podran utilizar.
+    </p>
+
+    <label>Puntos Restantes:</label><label id="PuntosHabilidades">20</label>
+    <br>
+      <a href="#" routerLink="/Habilidades Select" ><button> Agregar Habilidad </button></a>
+<br>
+      <h2 class="Titulos">Esencias:</h2>
+
+      <p>
+        las Esencias pueden ser de 9 tipos diferentes y son la funete de magia
+        que utilizan los arcanos para realizar sus ataques.<br>
+        Cada Esencia es donde se reúnen magias que comparten ciertas características o que comparten<br>
+        algún tipo de origen y conexión entre ellas, y estas son:<br>
+      </p>
+
+      <label>Puntos Restantes:</label><label>{{puntosEsencia}}</label>
+
+      <br>
+
+      <a><button class="BotonGeneral">Fortaleza</button></a>
+      <label>  {{puntosRepartidosEsencias.Fortaleza}}</label><label> /5 </label>
+      <button (click)="ModificarFortaleza(+1)" class="Suma"> - </button>
+      <button (click)="ModificarFortaleza(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Apoyo</button></a>
+      <label>  {{puntosRepartidosEsencias.Apoyo}}</label><label> /5 </label>
+      <button (click)="ModificarApoyo(+1)" class="Suma"> - </button>
+      <button (click)="ModificarApoyo(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Control</button></a>
+      <label>  {{puntosRepartidosEsencias.Control}}</label><label> /5 </label>
+      <button (click)="ModificarControl(+1)" class="Suma"> - </button>
+      <button (click)="ModificarControl(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Cuerpo</button></a>
+      <label>  {{puntosRepartidosEsencias.Cuerpo}}</label><label> /5 </label>
+      <button (click)="ModificarCuerpo(+1)" class="Suma"> - </button>
+      <button (click)="ModificarCuerpo(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Daño</button></a>
+      <label>  {{puntosRepartidosEsencias.Danio}}</label><label> /5 </label>
+      <button (click)="ModificarDanio(+1)" class="Suma"> - </button>
+      <button (click)="ModificarDanio(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Elementalismo</button></a>
+      <label>  {{puntosRepartidosEsencias.Elementalismo}}</label><label> /5 </label>
+      <button (click)="ModificarElementalismo(+1)" class="Suma"> - </button>
+      <button (click)="ModificarElementalismo(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Invocacion</button></a>
+      <label>  {{puntosRepartidosEsencias.Invocacion}}</label><label> /5 </label>
+      <button (click)="ModificarInvocacion(+1)" class="Suma"> - </button>
+      <button (click)="ModificarInvocacion(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Mente</button></a>
+      <label>  {{puntosRepartidosEsencias.Mente}}</label><label> /5 </label>
+      <button (click)="ModificarMente(+1)" class="Suma"> - </button>
+      <button (click)="ModificarMente(-1)" class="Resta"> - </button>
+      <br>
+
+
+      <a><button class="BotonGeneral">Sagacidad</button></a>
+      <label>  {{puntosRepartidosEsencias.Sagacidad}}</label><label> /5 </label>
+      <button (click)="ModificarSagacidad(+1)" class="Suma"> - </button>
+      <button (click)="ModificarSagacidad(-1)" class="Resta"> - </button>
+      <br>
+
+      <h2 class="Titulos">Magias:</h2>
+
+      <p class="DescripcionMagias">
+        Las Magias son las herramientas de los personajes para poder combatir e interactuar con el nuevo
+        mundo que los rodea. Como ya hemmos visto en Esencias, estas cumplen diferentes roles,
+        que van desde el control de masas, aumentar el daño, invocar ordas que combatan por ti,
+        o inclusive si lo prefieres abocarte al apoyo y cobertura de tus aliados.
+        <br>
+        <br>
+        Las Magias se dividen en 4 niveles, que van desde el nivel uno, que son las mas Magias más basicas,
+        con una Efectividad de 4 y efectos bajos, estas van escalando hasta llegar al nivel 4,
+        las cuales son las mas poderosas, con efectos abrumadores y una Efectividad de 10 o 12 en algunos casos.
+        La Efectividad son los dados que lanzara el jugador para determinar la potencia, durabilidad,
+        efecto desu magia, esto va a bariar dependiendo de cada una de las magias y esta detallado en cada una de ellas.
+        <br>
+        <br>
+        Las Magias tienen una cantidad de usos máxima, de 5 usos, los cuales podrán utilizarse como
+        habilidades únicas o consumirse como usos extra para potenciar la magia.
+        Los usos iniciales son de 10 usos a repartir en las Magias que deseen, los usos, como ya dijimos,
+        maximos que puede tener una magia son de 5 y al nivel 0 no puede superar los 2 usos y
+        solo se pueden eleguir magias de nivel 1.Como con las habilidades, las magias estan sujetas a su Esencia,
+        por lo tanto les recomendamos volver a revisar el apartado de esencias, y eleguir las magias que mas le convengan.
+        Recuerden que si poseen una magia de una esencia que carecen no la podran utilizar.
+      </p>
+      <label>Puntos Restantes:</label><label>10</label>
+      <br>
+
+      <button>Agregar una Magia</button>
+      <br>
+
+    </div>
+  <div id="Bg_Dawn"></div>
+  </div>
+  </div>
+</body>
+</html>
