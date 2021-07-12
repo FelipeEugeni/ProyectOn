@@ -19,6 +19,7 @@ import { EstadisticaInteligenciaComponent } from './crear-personaje/armado-ficha
 import { EstadisticaResistenciaComponent } from './crear-personaje/armado-ficha/armado-uno/estadisticas/estadistica-resistencia/estadistica-resistencia.component';
 import { EstadisticaSabiduriaComponent } from './crear-personaje/armado-ficha/armado-uno/estadisticas/estadistica-sabiduria/estadistica-sabiduria.component';
 import { CrearPersonajeComponent } from './crear-personaje/crear-personaje.component';
+import { RefactPruebaComponent } from './refact-prueba/refact-prueba.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CrearPersonajeComponent } from './crear-personaje/crear-personaje.compo
     EstadisticaInteligenciaComponent,
     EstadisticaResistenciaComponent,
     EstadisticaSabiduriaComponent,
-    CrearPersonajeComponent
+    CrearPersonajeComponent,
+    RefactPruebaComponent
   ],
   imports: [
     BrowserModule,

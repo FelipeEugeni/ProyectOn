@@ -15,15 +15,16 @@ import {EstadisticaResistenciaComponent} from "./crear-personaje/armado-ficha/ar
 import {EstadisticaSabiduriaComponent} from "./crear-personaje/armado-ficha/armado-uno/estadisticas/estadistica-sabiduria/estadistica-sabiduria.component";
 import {EstadisticaVoluntadComponent} from "./crear-personaje/armado-ficha/armado-uno/estadisticas/estadistica-voluntad/estadistica-voluntad.component";
 import {CrearPersonajeComponent} from "./crear-personaje/crear-personaje.component";
+import {RefactPruebaComponent} from "./refact-prueba/refact-prueba.component";
 
 const routes: Routes = [
 
-  {path: "Crear Personaje/:paso", component: CrearPersonajeComponent, children: [
+  {path: "Crear Personaje", component: CrearPersonajeComponent, children: [
       {path: "Armado 1", component: ArmadoUnoComponent},
       {path: "Armado 2", component: ArmadoDosComponent},
 
     ]},
-  {path: "", component: HomePageComponent},
+  {path: "Pruebas", component:RefactPruebaComponent},
   {path: "Habilidades Select", component: HabilidadesSelectComponent},
   {path:'Arcanismo', component: EstadisticaArcanismoComponent},
   {path:'Astucia', component: EstadisticaAstuciaComponent},
@@ -34,7 +35,7 @@ const routes: Routes = [
   {path:'Resistencia', component: EstadisticaResistenciaComponent},
   {path:'Sabiduria', component: EstadisticaSabiduriaComponent},
   {path:'Voluntad', component: EstadisticaVoluntadComponent},
-
+  {path: "**", component: HomePageComponent},
 ];
 
 @NgModule({
