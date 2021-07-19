@@ -1,0 +1,85 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Armado de Ficha Paso Tres</title>
+
+</head>
+
+<div id="bg">
+
+  <div id="bg_up">
+
+    <div id="Encabezado"></div>
+
+    <div id="Texto">
+
+      <h1 class="Titulos">Armado de Ficha</h1>
+
+      <h2 class="Titulos">Inventario:</h2>
+
+      <p>
+        el Inventario, tiene dos bloques, el primero se relaciona a los objetos y sus características, mientras que el
+        segundo está dedicado al dinero.<br>
+        El primer bloque de los dos mencionados es el de los objetos, estos tienen 4 columnas en las que
+        se enlista el Objeto, ya sea con nombre propio si lo poseyera o con un nombre genérico, luego en
+        la columna de Usos se anota la cantidad de veces que este podrá ser utilizado antes de
+        descargarse o de dejar de funcionar, en el caso de que se hable de un objeto de combate se
+        hablara de la cantidad de resistencia que este tolerara antes de romperse. Si los objetos
+        presentaran alguna característica mágica, o algo muy específico esto deberá ser anotado en la
+        columna de Anotaciones del objeto, donde se la dará lugar para anotar cualquier hechizo,
+        maldición, efecto particular o interacción con la tirada que tenga un objeto. Por último nos
+        encontramos con la columna de Bonificación, esta es la que indica que bonificación añade a la
+        Efectividad final el objeto.<br>
+        El segundo bloque es más pequeño y es en el que tomaremos nota del Dinero de nuestro
+        personaje.<br>
+        Al Comenzar el Master les determinara con que objetos comenzaran, para su rapido acceso, aqui se lo dividimos en
+        4 secciones, Armamento, Armadura, Utilidades y Dinero:
+      </p>
+
+      <label>Armamento Principal:</label><br>
+      <button>Agregar Arma Unica</button><br>
+      <input placeholder="Nombre">
+      <input placeholder="Caracteristica"><br>
+      <input placeholder="Bonificacion">
+      <input placeholder="Usos"><br>
+      <label>Armamento Secundario:</label><br>
+      <button>Agregar Arma Unica</button><br>
+      <input placeholder="Nombre">
+      <input placeholder="Caracteristica"><br>
+      <input placeholder="Bonificacion">
+      <input placeholder="Usos"><br>
+      <label>Armadura:</label><br>
+      <button>Agregar Armadura Unica</button><br>
+      <input placeholder="Nombre">
+      <input placeholder="Caracteristica"><br>
+      <input placeholder="Bonificacion">
+      <input placeholder="Usos"><br>
+      <label>Utilidades:</label><br>
+      <button>Agregar Utilidad</button><br>
+      <input placeholder="Nombre">
+      <input placeholder="Bonificacion"><br>
+      <input placeholder="Nombre">
+      <input placeholder="Usos"><br>
+      <br>
+      <label>Dinero: </label><input placeholder="Lo que el master indique">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="botones">
+        <a href="#" routerLink="/crearheroe/pasosiete">
+          <button id="next">Siguiente Paso</button>
+        </a>
+        <a href="#" routerLink="/crearheroe/pasocinco">
+          <button id="back">Paso Anterior</button>
+        </a>
+        <a href="#" routerLink="/homepage">
+         <button id="homepage">Ir a Inicio</button>
+        </a>
+      </div>
+    </div>
+
+    <div id="Bg_Dawn"></div>
+  </div>
+</div>

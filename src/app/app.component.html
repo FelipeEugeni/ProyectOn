@@ -1,12 +1,44 @@
+<div id="baner"></div>
 <nav>
-  <a>Historia </a>
-  <a> Personajes </a>
-  <a> Mapas </a>
-  <a href="#" routerLink="Pruebas"> Manual </a>
-  <a href="#" routerLink="/Crear Personaje"> Crear Personaje </a>
+<ul>
+  <li class="menu">
+    <a class="submenu"><button>Leyendas</button></a>
+    <div class="opciones">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li class="menu">
+    <a class="submenu"><button>Personajes</button></a>
+    <div class="opciones">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li class="menu">
+    <a class="submenu"><button>Regiones</button></a>
+    <div class="opciones">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li class="menu">
+    <a class="submenu"><button>Crear Personaje</button></a>
+    <div class="opciones">
+      <a routerLink="/crearheroe/pasouno">Encabezado de Ficha</a>
+      <a routerLink="/crearheroe/pasodos">Estadisticas/Habilidades</a>
+      <a routerLink="/crearheroe/pasotres">Esencias/Magias</a>
+      <a routerLink="/crearheroe/pasocuatro">Magias Menores</a>
+      <a routerLink="/crearheroe/pasocinco">Modificadores/Tecnicas</a>
+      <a routerLink="/crearheroe/pasoseis">Inventario</a>
+      <a routerLink="/crearheroe/pasosiete">Trasfondo</a>
+    </div>
+  </li>
+</ul>
 </nav>
-
-
 
 <router-outlet></router-outlet>
 

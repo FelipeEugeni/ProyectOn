@@ -1,0 +1,94 @@
+#baner {
+  background-image: url("src/assets/Baner 2.jpg");
+  width: 1920px;
+  height: 492px;
+}
+
+nav {
+  text-align: center;
+ background-color: black;
+  width: 1920px;
+  height: 40px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+
+}
+
+a.submenu {
+  flex: auto;
+}
+
+li {
+  float: none;
+}
+
+li a, .submenu {
+
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+li.menu {
+  display: inline-block;
+}
+
+.opciones {
+  display: none;
+  position: absolute;
+  background-color: darkviolet;
+  padding: 0;
+  background-position: bottom;
+}
+
+.opciones a {
+  margin-right: auto;
+  margin-left: auto;
+  color: black;
+  padding: 5px 0;
+  display: block;
+  background-color: darkviolet;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  font-size: 18px;
+
+}
+
+.opciones a:hover {
+ background-color: black;
+  color: darkgrey;
+  height: 40px;
+  width: 200px;
+  font-size: 18px;
+}
+
+.menu:hover .opciones {
+  display: block;
+}
+ button {
+   background-color: transparent;
+   color: darkgrey;
+   border: transparent;
+   height: 40px;
+   width: 200px;
+   font-size: 18px;
+ }
+button:hover {
+  background-color: darkviolet;
+  color: black;
+  height: 40px;
+  width: 200px;
+  font-size: 18px;
+}
