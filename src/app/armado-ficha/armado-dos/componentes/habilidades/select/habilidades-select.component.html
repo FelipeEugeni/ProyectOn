@@ -1,0 +1,33 @@
+<ng-template #crearSelect>
+  <div class="modal-header">
+    <h4>Habilidades</h4>
+    <button class="close" aria-label="close" type="button" (click)="cerrarModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <select [(ngModel)]="estadisticaCarga" (ngModelChange)="selectHabilidades($event)">
+      <option [value]="0">Eleguir Estadistica</option>
+      <option *ngFor="let estadistica of estadisticasid" [value]="estadistica.statId">
+        {{estadistica.nombre}}
+      </option>
+    </select>
+
+    <select [(ngModel)]="habilidadCarga" (ngModelChange)="cargaHabilidades($event)">
+      <option [value]="0">Eleguir Habilidad</option>
+      <option title="{{habilidad.titulo}}" *ngFor="let habilidad of habilidadesid" [value]="habilidad.skillId">
+        {{habilidad.nombre}}
+      </option>
+    </select>
+    <h4>Lista Habilidades</h4>
+    <div *ngFor="let mostrar of habilidadesService.habilidadesHereo">
+      {{mostrar.nombre}}: {{mostrar.titulo}}
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="close" aria-label="close" type="button" (click)="cerrarModal()">
+      <span aria-hidden="true">Aceptar</span>
+    </button>
+  </div>
+
+</ng-template>

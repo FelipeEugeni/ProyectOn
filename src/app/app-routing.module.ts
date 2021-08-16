@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {ArmadoUnoComponent} from "./armado-ficha/armado-uno/armado-uno.component";
-import {AppComponent} from "./app.component";
 import {ArmadoDosComponent} from "./armado-ficha/armado-dos/armado-dos.component";
 import {HomePageComponent} from "./home-page/home-page.component";
-import {HabilidadesSelectComponent} from "./armado-ficha/armado-uno/habilidades-select/habilidades-select.component";
-import {EstadisticaArcanismoComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-arcanismo/estadistica-arcanismo.component";
-import {EstadisticaAstuciaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-astucia/estadistica-astucia.component";
-import {EstadisticaCarismaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-carisma/estadistica-carisma.component";
-import {EstadisticaDestrezaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-destreza/estadistica-destreza.component";
-import {EstadisticaFuerzaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-fuerza/estadistica-fuerza.component";
-import {EstadisticaInteligenciaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-inteligencia/estadistica-inteligencia.component";
-import {EstadisticaResistenciaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-resistencia/estadistica-resistencia.component";
-import {EstadisticaSabiduriaComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-sabiduria/estadistica-sabiduria.component";
-import {EstadisticaVoluntadComponent} from "./armado-ficha/armado-dos/estadisticas/estadistica-voluntad/estadistica-voluntad.component";
+import {HabilidadesSelectComponent} from "./armado-ficha/armado-dos/componentes/habilidades/select/habilidades-select.component";
+import {EstadisticaArcanismoComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-arcanismo/estadistica-arcanismo.component";
+import {EstadisticaAstuciaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-astucia/estadistica-astucia.component";
+import {EstadisticaCarismaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-carisma/estadistica-carisma.component";
+import {EstadisticaDestrezaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-destreza/estadistica-destreza.component";
+import {EstadisticaFuerzaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-fuerza/estadistica-fuerza.component";
+import {EstadisticaInteligenciaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-inteligencia/estadistica-inteligencia.component";
+import {EstadisticaResistenciaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-resistencia/estadistica-resistencia.component";
+import {EstadisticaSabiduriaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-sabiduria/estadistica-sabiduria.component";
+import {EstadisticaVoluntadComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-voluntad/estadistica-voluntad.component";
 
 import {RefactPruebaComponent} from "./refact-prueba/refact-prueba.component";
 import {ArmadoTresComponent} from "./armado-ficha/armado-tres/armado-tres.component";
@@ -47,7 +46,7 @@ const routes: Routes = [
     ]},
 
   {path: 'pruebas', component:RefactPruebaComponent},
-  {path: 'habilidades Select', component: HabilidadesSelectComponent},
+  {path: 'habilidades', component: HabilidadesSelectComponent},
   {path:'homepage', component: HomePageComponent},
   {path: '**', component: HomePageComponent},
 ];

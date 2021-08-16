@@ -21,22 +21,22 @@
         del juego.
       </p>
 
-      <label for="Name">Nombre: </label><input id="Name"><br>
+      <label>Nombre: </label><input [(ngModel)]='armadoUnoService.datosPersonaje.nombre' type="text" ><br>
 
       <p>
         Luego vamos a ingresar nuestro nombre, para que el master (Aquella persona que dirigue la mesa) sepa a quien
         le pertenece determinado Personaje
       </p>
 
-      <label for="NamePlayer">Jugador: </label><input id="NamePlayer">
+      <label>Jugador: </label><input [(ngModel)]='armadoUnoService.datosPersonaje.jugador' type="text">
 
       <p>
         Luego ingresaremos el nivel con el cual comenzaremos en la mesa, recuerda que cada nivel da diferentes puntos
         a repartir, es importante ser sincero y aplicar el nivel que nos diaga el master.
       </p>
 
-      <select [(ngModel)]="nivelId.nivel" (ngModelChange)="experiencia($event)">
-        <option *ngFor=" let nivel2 of nivel" value={{nivel2.exp}}>{{nivel2.nivel}}</option>
+      <select [(ngModel)]="armadoUnoService.datosPersonaje.nivel.nivel" (ngModelChange)="armadoUnoService.datosPersonaje.experiencia = $event">
+        <option *ngFor=" let nivel of armadoUnoService.experienciaSelect" value={{nivel.exp}}>{{nivel.nivel}}</option>
       </select>
 
       <p>
@@ -44,7 +44,7 @@
         Recuerda que si no se comienza en nivel 0, la experiencia se carga sola.
       </p>
 
-      <label>Experiencia: {{experienciaId}}</label>
+      <label>Experiencia: {{armadoUnoService.datosPersonaje.experiencia}}</label>
       <br>
       <br>
       <br>

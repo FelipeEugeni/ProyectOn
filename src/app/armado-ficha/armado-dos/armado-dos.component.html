@@ -14,6 +14,7 @@
 
       <h1 class="Titulos">Armado de Ficha</h1>
 
+
       <h2 class="Titulos">Estadisticas:</h2>
       <p>
         Son aquellos atributos que tiene todo personaje de forma natural y son aquellas aptitudes que<br>
@@ -25,80 +26,80 @@
         Las Estadisticas son:
       </p>
 
-      <label>Puntos Restantes:</label><label>{{puntosEstadisticas}}</label>
+      <label>Puntos Restantes:</label><label>{{armadoDosService.pEstadisticas}}</label>
       <br>
 
       <a href="#" routerLink="/estadisticas/arcanismo">
         <button class="BotonGeneral">Arcanismo</button>
       </a>
 
-      <label> {{puntosRepartidosEstadisticas.Arcanismo}}</label><label> /5 </label>
-      <button (click)="ModificarArcanismo(+1)" class="Suma"> -</button>
-      <button (click)="ModificarArcanismo(-1)" class="Resta"> -</button>
+      <label> {{armadoDosService.prEtadisticas[0].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarArcanismo(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarArcanismo(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/astucia">
         <button class="BotonGeneral">Astucia</button>
       </a>
-      <label> {{puntosRepartidosEstadisticas.Astucia}}</label><label> /5 </label>
-      <button (click)="ModificarAstucia(+1)" class="Suma"> -</button>
-      <button (click)="ModificarAstucia(-1)" class="Resta"> -</button>
+      <label> {{armadoDosService.prEtadisticas[1].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarAstucia(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarAstucia(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/carisma">
         <button class="BotonGeneral">Carisma</button>
       </a>
-      <label>  {{puntosRepartidosEstadisticas.Carisma}}</label><label> /5 </label>
-      <button (click)="ModificarCarisma(+1)" class="Suma"> -</button>
-      <button (click)="ModificarCarisma(-1)" class="Resta"> -</button>
+      <label>  {{armadoDosService.prEtadisticas[2].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarCarisma(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarCarisma(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/destreza">
         <button class="BotonGeneral">Destreza</button>
       </a>
-      <label>  {{puntosRepartidosEstadisticas.Destreza}}</label><label> /5 </label>
-      <button (click)="ModificarDestreza(+1)" class="Suma"> -</button>
-      <button (click)="ModificarDestreza(-1)" class="Resta"> -</button>
+      <label>  {{armadoDosService.prEtadisticas[3].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarDestreza(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarDestreza(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/fuerza">
         <button class="BotonGeneral">Fuerza</button>
       </a>
-      <label>  {{puntosRepartidosEstadisticas.Fuerza}}</label><label> /5 </label>
-      <button (click)="ModificarFuerza(+1)" class="Suma"> -</button>
-      <button (click)="ModificarFuerza(-1)" class="Resta"> -</button>
+      <label>  {{armadoDosService.prEtadisticas[4].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarFuerza(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarFuerza(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/inteligencia">
         <button class="BotonGeneral">Inteligencia</button>
       </a>
-      <label> {{puntosRepartidosEstadisticas.Inteligencia}}</label><label> /5 </label>
-      <button (click)="ModificarInteligencia(+1)" class="Suma"> -</button>
-      <button (click)="ModificarInteligencia(-1)" class="Resta"> -</button>
+      <label> {{armadoDosService.prEtadisticas[5].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarInteligencia(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarInteligencia(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/resistencia">
         <button class="BotonGeneral">Resistencia</button>
       </a>
-      <label>  {{puntosRepartidosEstadisticas.Resistencia}}</label><label> /5 </label>
-      <button (click)="ModificarResistencia(+1)" class="Suma"> -</button>
-      <button (click)="ModificarResistencia(-1)" class="Resta"> -</button>
+      <label>  {{armadoDosService.prEtadisticas[6].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarResistencia(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarResistencia(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/sabiduria">
         <button class="BotonGeneral">Sabiduría</button>
       </a>
-      <label>  {{puntosRepartidosEstadisticas.Sabiduria}}</label><label> /5 </label>
-      <button (click)="ModificarSabiduria(+1)" class="Suma"> -</button>
-      <button (click)="ModificarSabiduria(-1)" class="Resta"> -</button>
+      <label>  {{armadoDosService.prEtadisticas[7].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarSabiduria(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarSabiduria(-1)" class="Resta"> -</button>
       <br>
 
       <a href="#" routerLink="/estadisticas/voluntad">
         <button class="BotonGeneral">Voluntad</button>
       </a>
-      <label>  {{puntosRepartidosEstadisticas.Voluntad}}</label><label> /5 </label>
-      <button (click)="ModificarVoluntad(+1)" class="Suma"> -</button>
-      <button (click)="ModificarVoluntad(-1)" class="Resta"> -</button>
+      <label>  {{armadoDosService.prEtadisticas[8].puntos}}</label><label> /5 </label>
+      <button (click)="armadoDosService.ModificarVoluntad(+1)" class="Suma"> -</button>
+      <button (click)="armadoDosService.ModificarVoluntad(-1)" class="Resta"> -</button>
       <br>
 
       <h2 class="Titulos">Habilidades:</h2>
@@ -113,12 +114,12 @@
         Al igual que en las Estadisticas, su nivel maximo es de 5 y no se puede superar los 2 puntos al inicio.
         Recuerden que si poseen una Habilidad de una Estadistica que carecen no la podran utilizar.
       </p>
-
-      <label>Puntos Restantes:</label><label id="puntosHabilidades">20</label>
       <br>
-      <a href="#" routerLink="/Habilidades Select">
-        <button> Agregar Habilidad</button>
-      </a>
+      <app-habilidades-heroe></app-habilidades-heroe>
+      <app-habilidades-select #crearSelect></app-habilidades-select>
+
+      <button (click)="crearSelect.agregarSelec(null)">Agregar Habilidad</button>
+
 
       <h2>Iniciativa:</h2>
 
@@ -128,7 +129,8 @@
         personajes creados por el narrador.<br>
         Tu iniciativa te la da la suma de tu Astucia y tu Destreza.
       </p>
-      <label>Tu iniciativa es de: {{puntosRepartidosEstadisticas.Astucia + puntosRepartidosEstadisticas.Destreza}}</label>
+      <label>Tu iniciativa es
+        de: {{armadoDosService.prEtadisticas[1].puntos + armadoDosService.prEtadisticas[3].puntos}}</label>
       <br>
       <br>
       <br>
@@ -151,3 +153,4 @@
     <div id="Bg_Dawn"></div>
   </div>
 </div>
+
