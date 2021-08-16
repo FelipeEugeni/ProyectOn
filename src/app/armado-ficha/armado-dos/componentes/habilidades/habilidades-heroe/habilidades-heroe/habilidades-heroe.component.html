@@ -1,0 +1,13 @@
+<label>Puntos Restantes:</label><label>{{habilidadesHeroeService.pHabilidad}}</label>
+<br>
+<div *ngFor="let mostrar of habilidadesHeroeService.habilidadesHereo, let i = index ">
+  <button class="BotonGeneral" title="{{habilidadesHeroeService.habilidadesHereo[i].titulo}}">
+  {{habilidadesHeroeService.habilidadesHereo[i].nombre}}
+  </button>
+  <label>{{habilidadesHeroeService.habilidadesHereo[i].puntos}}/5</label>
+  <button (click)="habilidadesHeroeService.puntosHabilidades(+1, i)" class="Suma">-</button>
+  <button (click)="habilidadesHeroeService.puntosHabilidades(-1, i)" class="Resta">-</button>
+</div>
+
+
+
