@@ -33,7 +33,7 @@
       <a>
         <button class="BotonGeneral">Fortaleza</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.fortaleza}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[0].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarFortaleza(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarFortaleza(-1)" class="Resta"> -</button>
       <br>
@@ -42,7 +42,7 @@
       <a>
         <button class="BotonGeneral">Apoyo</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.apoyo}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[1].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarApoyo(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarApoyo(-1)" class="Resta"> -</button>
       <br>
@@ -51,7 +51,7 @@
       <a>
         <button class="BotonGeneral">Control</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.control}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[2].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarControl(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarControl(-1)" class="Resta"> -</button>
       <br>
@@ -60,7 +60,7 @@
       <a>
         <button class="BotonGeneral">Cuerpo</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.cuerpo}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[3].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarCuerpo(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarCuerpo(-1)" class="Resta"> -</button>
       <br>
@@ -69,7 +69,7 @@
       <a>
         <button class="BotonGeneral">Daño</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.danio}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[4].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarDanio(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarDanio(-1)" class="Resta"> -</button>
       <br>
@@ -78,7 +78,7 @@
       <a>
         <button class="BotonGeneral">Elementalismo</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.elementalismo}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[5].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarElementalismo(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarElementalismo(-1)" class="Resta"> -</button>
       <br>
@@ -87,7 +87,7 @@
       <a>
         <button class="BotonGeneral">Invocacion</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.invocacion}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[6].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarInvocacion(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarInvocacion(-1)" class="Resta"> -</button>
       <br>
@@ -96,16 +96,16 @@
       <a>
         <button class="BotonGeneral">Mente</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.mente}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[7].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarMente(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarMente(-1)" class="Resta"> -</button>
       <br>
 
 
       <a>
-        <button class="BotonGeneral">Sagacidad</button>
+        <button class="BotonGeneral"> Sagacidad</button>
       </a>
-      <label>  {{armadoTresService.prEsencias.sagacidad}}</label><label> /5 </label>
+      <label>  {{armadoTresService.prEsencias[8].puntos}}</label><label> /5 </label>
       <button (click)="armadoTresService.ModificarSagacidad(+1)" class="Suma"> -</button>
       <button (click)="armadoTresService.ModificarSagacidad(-1)" class="Resta"> -</button>
       <br>
@@ -135,10 +135,11 @@
         convengan.
         Recuerden que si poseen una magia de una esencia que carecen no la podran utilizar.
       </p>
-      <label>Puntos Restantes:</label><label>10</label>
-      <br>
 
-      <button>Agregar una Magia</button>
+      <app-magias-hereo></app-magias-hereo>
+      <app-selector-magias #crearSelect></app-selector-magias>
+
+      <button (click)="crearSelect.agregarSelecMagia(null)">Agregar Magia</button>
       <br>
       <br>
       <br>

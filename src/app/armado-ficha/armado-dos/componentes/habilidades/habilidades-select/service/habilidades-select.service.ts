@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Estadistica, HabilidadSelect} from "../../../../../../shared/interface/interface-armado";
+import {Estadistica, Habilidad} from "../../../../../../shared/interface/interface-armado";
 import {ArmadoDosService} from "../../../../service/armado-dos.service";
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadesSelectService {
-  private habilidades: HabilidadSelect[] = [
+  private habilidades: Habilidad[] = [
     {
       titulo: "Utilizar armas mágicas y efectos.",
       nombre: "Armas mágicas",
@@ -471,7 +471,7 @@ export class HabilidadesSelectService {
       puntos: 0,
     },
     {
-      titulo: "statId para realizar ciertas proezas.",
+      titulo: "esenciaId para realizar ciertas proezas.",
       nombre: "Coraje",
       skillId: 4,
       statId:9,
@@ -504,7 +504,7 @@ export class HabilidadesSelectService {
     this.estadisticas = this.armadoDosService.prEtadisticas
   }
 
-  getHabilidades(): HabilidadSelect[] {
+  getHabilidades(): Habilidad[] {
     return this.habilidades;
   }
   getEstadisticas(): Estadistica[]{

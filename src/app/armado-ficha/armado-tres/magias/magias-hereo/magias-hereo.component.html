@@ -1,0 +1,12 @@
+<label>Puntos Restantes:</label><label>{{magiasHereoService.pMagias}}</label>
+<br>
+<div *ngFor="let mostrar of magiasHereoService.magiasHereo, let i = index ">
+  <button class="BotonGeneral" title="{{magiasHereoService.magiasHereo[i].titulo}}">
+    {{magiasHereoService.magiasHereo[i].nombre}}
+  </button>
+  <label>{{magiasHereoService.magiasHereo[i].puntos}}/5</label>
+  <button (click)="magiasHereoService.puntosMagias(+1, i)" class="Suma">-</button>
+  <button (click)="magiasHereoService.puntosMagias(-1, i)" class="Resta">-</button>
+</div>
+
+

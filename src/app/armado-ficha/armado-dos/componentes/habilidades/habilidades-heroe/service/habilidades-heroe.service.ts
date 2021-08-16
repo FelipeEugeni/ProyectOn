@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import {HabilidadesServiceService} from "../../service/habilidades-service.service";
-import {HabilidadSelect} from "../../../../../../shared/interface/interface-armado";
+import {HabilidadesService} from "../../service/habilidades.service";
+import {Habilidad} from "../../../../../../shared/interface/interface-armado";
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadesHeroeService {
   public pHabilidad: number = 20;
-  public habilidadesHereo: HabilidadSelect[];
+  public habilidadesHereo: Habilidad[];
   constructor(
-    public habilidadesServicce: HabilidadesServiceService,
+    public habilidadesServicce: HabilidadesService,
   ) {
     this.habilidadesHereo = this.habilidadesServicce.habilidadesHereo
   }

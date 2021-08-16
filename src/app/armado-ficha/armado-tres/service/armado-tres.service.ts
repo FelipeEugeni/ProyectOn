@@ -6,87 +6,126 @@ import {Esencias} from "../../../shared/interface/interface-armado";
 })
 export class ArmadoTresService {
   public pEsencia: number = 5;
-  public prEsencias: Esencias = {
-    fortaleza: 0,
-    apoyo: 0,
-    control: 0,
-    cuerpo: 0,
-    danio: 0,
-    elementalismo: 0,
-    invocacion: 0,
-    mente: 0,
-    sagacidad: 0,
-  };
+  public prEsencias: Esencias[] = [
+    {
+      nombre: 'Fortaleza',
+      puntos: 0,
+      esenciaId: 1
+    },
+    {
+      nombre: 'Apoyo',
+      puntos: 0,
+      esenciaId: 2
+    },
+    {
+      nombre: 'Control',
+      puntos: 0,
+      esenciaId: 3
+    },
+    {
+      nombre: 'Cuerpo',
+      puntos: 0,
+      esenciaId: 4
+    },
+    {
+      nombre: 'Daño',
+      puntos: 0,
+      esenciaId: 5
+    },
+    {
+      nombre: 'Elementalismo',
+      puntos: 0,
+      esenciaId: 6
+    },
+
+    {
+      nombre: 'Invocacion',
+      puntos: 0,
+      esenciaId: 7
+    },
+
+    {
+      nombre: 'Mente',
+      puntos: 0,
+      esenciaId: 8
+    },
+
+    {
+      nombre: 'Sagacidad',
+      puntos: 0,
+      esenciaId: 9
+    }
+  ];
   constructor() { }
 
   public ModificarFortaleza(valor: number) {
-    if (this.prEsencias.fortaleza + valor <= 2 && this.prEsencias.fortaleza + valor >= 0) {
+    if (this.prEsencias[0].puntos + valor <= 2 && this.prEsencias[0].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.fortaleza = this.prEsencias.fortaleza + valor;
+        this.prEsencias[0].puntos = this.prEsencias[0].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarApoyo(valor: number) {
-    if (this.prEsencias.apoyo + valor <= 2 && this.prEsencias.apoyo + valor >= 0) {
+    if (this.prEsencias[1].puntos + valor <= 2 && this.prEsencias[1].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.apoyo = this.prEsencias.apoyo + valor;
+        this.prEsencias[1].puntos = this.prEsencias[1].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarControl(valor: number) {
-    if (this.prEsencias.control + valor <= 2 && this.prEsencias.control + valor >= 0) {
+    if (this.prEsencias[2].puntos + valor <= 2 && this.prEsencias[2].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.control = this.prEsencias.control + valor;
+        this.prEsencias[2].puntos = this.prEsencias[2].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarCuerpo(valor: number) {
-    if (this.prEsencias.cuerpo + valor <= 2 && this.prEsencias.cuerpo + valor >= 0) {
+    if (this.prEsencias[3].puntos + valor <= 2 && this.prEsencias[3].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.cuerpo = this.prEsencias.cuerpo + valor;
+        this.prEsencias[3].puntos = this.prEsencias[3].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarDanio(valor: number) {
-    if (this.prEsencias.danio + valor <= 2 && this.prEsencias.danio + valor >= 0) {
+    if (this.prEsencias[4].puntos + valor <= 2 && this.prEsencias[4].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.danio = this.prEsencias.danio + valor;
+        this.prEsencias[4].puntos = this.prEsencias[4].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarElementalismo(valor: number) {
-    if (this.prEsencias.elementalismo + valor <= 2 && this.prEsencias.elementalismo + valor >= 0) {
+    if (this.prEsencias[5].puntos + valor <= 2 && this.prEsencias[5].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.elementalismo = this.prEsencias.elementalismo + valor;
+        this.prEsencias[5].puntos = this.prEsencias[5].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarInvocacion(valor: number) {
-    if (this.prEsencias.invocacion + valor <= 2 && this.prEsencias.invocacion + valor >= 0) {
+    if (this.prEsencias[6].puntos + valor <= 2 && this.prEsencias[6].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.invocacion = this.prEsencias.invocacion + valor;
+        this.prEsencias[6].puntos = this.prEsencias[6].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarMente(valor: number) {
-    if (this.prEsencias.mente + valor <= 2 && this.prEsencias.mente + valor >= 0) {
+    if (this.prEsencias[7].puntos + valor <= 2 && this.prEsencias[7].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.mente = this.prEsencias.mente + valor;
+        this.prEsencias[7].puntos = this.prEsencias[7].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }
   }
   public ModificarSagacidad(valor: number) {
-    if (this.prEsencias.sagacidad + valor <= 2 && this.prEsencias.sagacidad + valor >= 0) {
+    if (this.prEsencias[8].puntos + valor <= 2 && this.prEsencias[8].puntos + valor >= 0) {
       if (this.pEsencia - valor <= 5 && this.pEsencia - valor >= 0) {
-        this.prEsencias.sagacidad = this.prEsencias.sagacidad + valor;
+        this.prEsencias[8].puntos = this.prEsencias[8].puntos + valor;
         this.pEsencia = this.pEsencia - valor;
       }
     }

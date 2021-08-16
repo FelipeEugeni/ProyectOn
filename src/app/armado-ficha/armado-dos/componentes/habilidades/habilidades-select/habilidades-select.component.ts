@@ -1,8 +1,8 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Estadistica, HabilidadSelect} from "../../../../../shared/interface/interface-armado";
+import {Estadistica, Habilidad} from "../../../../../shared/interface/interface-armado";
 import {HabilidadesSelectService} from "./service/habilidades-select.service";
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
-import {HabilidadesServiceService} from "../service/habilidades-service.service";
+import {HabilidadesService} from "../service/habilidades.service";
 
 @Component({
   selector: 'app-habilidades-select',
@@ -14,13 +14,13 @@ export class HabilidadesSelectComponent implements OnInit {
   public container: NgbModalRef;
   public estadisticasid: Estadistica[];
   public estadisticaCarga: number = 0;
-  public habilidadesid: HabilidadSelect[];
+  public habilidadesid: Habilidad[];
   public habilidadCarga: number = 0;
 
   constructor(
     public modal: NgbModal,
     public habilidadesSelecService: HabilidadesSelectService,
-    public habilidadesService: HabilidadesServiceService
+    public habilidadesService: HabilidadesService
   ) {
 
   }
@@ -49,7 +49,7 @@ export class HabilidadesSelectComponent implements OnInit {
   }
 
 
-  public agregarSelec(selecEstado: HabilidadSelect): void {
+  public agregarSelec(selecEstado: Habilidad): void {
     this.estadisticasid = this.habilidadesSelecService.getEstadisticas().filter(item => item.puntos >= 1)
     if (selecEstado == null) {
       this.habilidadesid = [];

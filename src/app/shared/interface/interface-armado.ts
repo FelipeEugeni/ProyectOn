@@ -13,7 +13,7 @@ export interface Estadistica {
   puntos: number;
   statId: number;
 }
-export interface HabilidadSelect {
+export interface Habilidad {
   titulo: string;
   nombre: string;
   skillId: number;
@@ -23,13 +23,15 @@ export interface HabilidadSelect {
 
 }
 export interface Esencias {
-  fortaleza: number;
-  apoyo: number;
-  control: number;
-  cuerpo: number;
-  danio: number;
-  elementalismo: number;
-  invocacion: number;
-  mente: number;
-  sagacidad: number;
+  nombre: string;
+  puntos: number;
+  esenciaId: number;
+}
+export interface Magia {
+  titulo: string;
+  nombre: string;
+  skillId: number;
+  esenciaId: number;
+  siglasEsencia: string;
+  puntos: number;
 }

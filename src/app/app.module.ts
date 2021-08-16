@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { ArmadoUnoComponent } from './armado-ficha/armado-uno/armado-uno.component';
 import { ArmadoDosComponent } from './armado-ficha/armado-dos/armado-dos.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { HabilidadesSelectComponent } from './armado-ficha/armado-dos/componentes/habilidades/select/habilidades-select.component';
+import { HabilidadesSelectComponent } from './armado-ficha/armado-dos/componentes/habilidades/habilidades-select/habilidades-select.component';
 import {FormsModule} from "@angular/forms";
-import { SelectorMagiasComponent } from './armado-ficha/armado-tres/magias-select/selector-magias.component';
+import { SelectorMagiasComponent } from './armado-ficha/armado-tres/magias/magias-select/selector-magias.component';
 import { EstadisticaArcanismoComponent } from './armado-ficha/armado-dos/componentes/estadisticas/estadistica-arcanismo/estadistica-arcanismo.component';
 import { EstadisticaVoluntadComponent } from './armado-ficha/armado-dos/componentes/estadisticas/estadistica-voluntad/estadistica-voluntad.component';
 import { EstadisticaAstuciaComponent } from './armado-ficha/armado-dos/componentes/estadisticas/estadistica-astucia/estadistica-astucia.component';
@@ -26,6 +26,8 @@ import { ArmadoSeisComponent } from './armado-ficha/armado-seis/armado-seis.comp
 import { ArmadoSieteComponent } from './armado-ficha/armado-siete/armado-siete.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HabilidadesHeroeComponent } from './armado-ficha/armado-dos/componentes/habilidades/habilidades-heroe/habilidades-heroe/habilidades-heroe.component';
+import { EsenciasComponent } from './armado-ficha/armado-tres/esencias/esencias.component';
+import { MagiasHereoComponent } from './armado-ficha/armado-tres/magias/magias-hereo/magias-hereo.component';
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { HabilidadesHeroeComponent } from './armado-ficha/armado-dos/componentes
     ArmadoSeisComponent,
     ArmadoSieteComponent,
     HabilidadesHeroeComponent,
+    EsenciasComponent,
+    MagiasHereoComponent,
   ],
   imports: [
     BrowserModule,
