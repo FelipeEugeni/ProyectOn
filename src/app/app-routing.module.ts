@@ -13,7 +13,6 @@ import {EstadisticaInteligenciaComponent} from "./armado-ficha/armado-dos/compon
 import {EstadisticaResistenciaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-resistencia/estadistica-resistencia.component";
 import {EstadisticaSabiduriaComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-sabiduria/estadistica-sabiduria.component";
 import {EstadisticaVoluntadComponent} from "./armado-ficha/armado-dos/componentes/estadisticas/estadistica-voluntad/estadistica-voluntad.component";
-
 import {RefactPruebaComponent} from "./refact-prueba/refact-prueba.component";
 import {ArmadoTresComponent} from "./armado-ficha/armado-tres/armado-tres.component";
 import {ArmadoCuatroComponent} from "./armado-ficha/armado-cuatro/armado-cuatro.component";

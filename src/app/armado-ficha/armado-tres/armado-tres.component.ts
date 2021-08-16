@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ArmadoTresService} from "./service/armado-tres.service";
+import {DataService} from "../data-pj/servicios-armado-ficha/data.service";
+import {MagiasService} from "./magias/service/magias.service";
 
 @Component({
   selector: 'app-armado-tres',
@@ -9,12 +11,17 @@ import {ArmadoTresService} from "./service/armado-tres.service";
 export class ArmadoTresComponent implements OnInit {
 
   constructor(
-    public armadoTresService: ArmadoTresService
+    public armadoTresService: ArmadoTresService,
+    public datosJugadorService: DataService,
+    public magiasService: MagiasService,
   ) {
   }
 
   ngOnInit(): void {
   }
-
+  public cargaDatosJugador(): void{
+    this.datosJugadorService.esenciasJugador = this.armadoTresService.prEsencias;
+    this.datosJugadorService.magiasJugador = this.magiasService.magiasHereo;
+  }
 }
 
