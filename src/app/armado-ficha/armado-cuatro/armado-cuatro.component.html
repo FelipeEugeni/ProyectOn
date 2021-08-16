@@ -132,8 +132,8 @@
         </tr>
       </table>
       <br>
-      <select>
-        <option>Elije Tu Condicion</option>
+      <select [(ngModel)]="armadoCuatroService.magiasMenoresHereo.condicion">
+        <option>{{armadoCuatroService.magiasMenoresHereo.condicion}}</option>
         <option>Anticipación</option>
         <option>Aparición</option>
         <option>Bonificación</option>
@@ -280,8 +280,8 @@
         </tr>
       </table>
       <br>
-      <select>
-        <option>Elije Una Magia Menor:</option>
+      <select [(ngModel)]="armadoCuatroService.magiasMenoresHereo.magiaMenor">
+        <option>{{armadoCuatroService.magiasMenoresHereo.magiaMenor}}</option>
         <option>Anticipación 1</option>
         <option>Bonificación ofensiva 1</option>
         <option>Bonificación ofensiva 2</option>
@@ -309,7 +309,7 @@
       <br>
       <div id="botones">
         <a href="#" routerLink="/crearheroe/pasocinco">
-          <button id="next">Siguiente Paso</button>
+          <button id="next" (click)="cargaDatosJugador()">Siguiente Paso</button>
         </a>
         <a href="#" routerLink="/crearheroe/pasotres">
           <button id="back">Paso Anterior</button>

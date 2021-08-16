@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ArmadoCuatroService} from "./service/armado-cuatro.service";
+import {DataService} from "../data-pj/servicios-armado-ficha/data.service";
 
 @Component({
   selector: 'app-armado-cuatro',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArmadoCuatroComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public armadoCuatroService: ArmadoCuatroService,
+    public datosJugadorService: DataService,
+  ) { }
 
   ngOnInit(): void {
   }
-
+  public cargaDatosJugador(): void{
+  this.datosJugadorService.magiasMenoresJugador = this.armadoCuatroService.magiasMenoresHereo
+  }
 }

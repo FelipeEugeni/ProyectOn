@@ -89,3 +89,15 @@ button {
 select {
   font-size: 18px
 }
+
+.botonDado {
+  width: 100px;
+  text-align: center;
+}
+.botonCalculo {
+  width: 200px;
+  text-align: center;
+}
+td {
+  padding: 10px;
+}

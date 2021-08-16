@@ -28,6 +28,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HabilidadesHeroeComponent } from './armado-ficha/armado-dos/componentes/habilidades/habilidades-heroe/habilidades-heroe/habilidades-heroe.component';
 import { EsenciasComponent } from './armado-ficha/armado-tres/esencias/esencias.component';
 import { MagiasHereoComponent } from './armado-ficha/armado-tres/magias/magias-hereo/magias-hereo.component';
+import { CrearTecnicaComponent } from './armado-ficha/armado-cinco/componentes/crear-tecnica/crear-tecnica.component';
+import { MostrarTecnicaComponent } from './armado-ficha/armado-cinco/componentes/mostrar-tecnica/mostrar-tecnica/mostrar-tecnica.component';
+import { DataPjComponent } from './armado-ficha/data-pj/data-pj.component';
 
 
 @NgModule({
@@ -57,6 +60,9 @@ import { MagiasHereoComponent } from './armado-ficha/armado-tres/magias/magias-h
     HabilidadesHeroeComponent,
     EsenciasComponent,
     MagiasHereoComponent,
+    CrearTecnicaComponent,
+    MostrarTecnicaComponent,
+    DataPjComponent,
   ],
   imports: [
     BrowserModule,

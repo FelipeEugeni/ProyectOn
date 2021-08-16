@@ -35,3 +35,17 @@ export interface Magia {
   siglasEsencia: string;
   puntos: number;
 }
+export interface MagiaMenor {
+  condicion: string;
+  magiaMenor: string;
+}
+export interface Modificador{
+  dado: any;
+  nombre: string;
+  valor: number;
+}
+export interface Tecnica{
+  nombre: string;
+  habilidades: Habilidad[];
+  bonificacion: number;
+}

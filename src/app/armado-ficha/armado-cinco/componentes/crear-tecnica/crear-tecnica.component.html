@@ -1,0 +1,38 @@
+<ng-template #CrearTecnica>
+  <div class="modal-header">
+    <h4>Tecnica</h4>
+    <button class="close" aria-label="close" type="button" (click)="cerrarModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  <label>Nombre de la Tecnica:<input [(ngModel)]="datoTecnica.nombre"></label>
+  <br>
+    <select [(ngModel)]="estadisticaCarga" (ngModelChange)="selectHabilidades($event)">
+      <option [value]="0">Elegir Estadistica</option>
+      <option *ngFor="let estadistica of estadisticasid" [value]="estadistica.statId">
+        {{estadistica.nombre}}
+      </option>
+    </select>
+    <select [(ngModel)]="habilidadCarga" (ngModelChange)="verificarHabilidades($event)">
+      <option [value]="0">Elegir Habilidad</option>
+      <option title="{{habilidad.titulo}}" *ngFor="let habilidad of habilidadesid" [value]="habilidad.skillId">
+        {{habilidad.nombre}}
+      </option>
+    </select>
+    <select [(ngModel)]="datoTecnica.bonificacion">
+      <option [value]="0">Bonificador</option>
+      <option [value]="1">+ 1</option>
+      <option [value]="2">+ 2</option>
+      <option [value]="3">+ 3</option>
+    </select>
+  </div>
+  <ul *ngFor="let data of datoTecnica.habilidades, let i = index">
+    <li>{{datoTecnica.habilidades[i].nombre}} +{{datoTecnica.bonificacion}}</li>
+  </ul>
+  <div class="modal-footer">
+    <button class="close" aria-label="close" type="button" (click)="verificacionCarga(estadisticaCarga)">
+      <span aria-hidden="true">Aceptar</span>
+    </button>
+  </div>
+</ng-template>
