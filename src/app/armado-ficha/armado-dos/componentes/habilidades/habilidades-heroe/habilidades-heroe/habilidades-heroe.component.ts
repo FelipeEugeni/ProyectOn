@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HabilidadesHeroeService} from "../service/habilidades-heroe.service";
 
 @Component({
@@ -9,8 +9,10 @@ import {HabilidadesHeroeService} from "../service/habilidades-heroe.service";
 export class HabilidadesHeroeComponent implements OnInit {
 
   constructor(
-    public habilidadesHeroeService: HabilidadesHeroeService
-  ) { }
+    public habilidadesHeroeService: HabilidadesHeroeService,
+  ) {
+
+  }
 
   ngOnInit(): void {
   }

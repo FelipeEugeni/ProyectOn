@@ -1,7 +1,6 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Estadistica, Habilidad} from "../../../../../shared/interface/interface-armado";
 import {HabilidadesSelectService} from "./service/habilidades-select.service";
-import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
 import {HabilidadesService} from "../service/habilidades.service";
 
 @Component({
@@ -10,15 +9,12 @@ import {HabilidadesService} from "../service/habilidades.service";
   styleUrls: ['./habilidades-select.component.css']
 })
 export class HabilidadesSelectComponent implements OnInit {
-  @ViewChild('crearSelect') tampleat: ElementRef;
-  public container: NgbModalRef;
   public estadisticasid: Estadistica[];
   public estadisticaCarga: number = 0;
   public habilidadesid: Habilidad[];
   public habilidadCarga: number = 0;
 
   constructor(
-    public modal: NgbModal,
     public habilidadesSelecService: HabilidadesSelectService,
     public habilidadesService: HabilidadesService
   ) {
@@ -26,6 +22,7 @@ export class HabilidadesSelectComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.estadisticasid = this.habilidadesSelecService.getEstadisticas().filter(item => item.puntos >= 1)
   }
 
   public selectHabilidades(id: number): void {
@@ -48,22 +45,4 @@ export class HabilidadesSelectComponent implements OnInit {
     }
   }
 
-
-  public agregarSelec(selecEstado: Habilidad): void {
-    this.estadisticasid = this.habilidadesSelecService.getEstadisticas().filter(item => item.puntos >= 1)
-    if (selecEstado == null) {
-      this.habilidadesid = [];
-      this.estadisticaCarga = 0;
-      this.habilidadCarga = 0;
-      this.container = this.modal.open(this.tampleat, {size: "lg"})
-    }
-  }
-
-  public cerrarModal(): void {
-    if (this.container === null) {
-      return;
-    }
-    this.container.close();
-    this.container = null;
-  }
 }

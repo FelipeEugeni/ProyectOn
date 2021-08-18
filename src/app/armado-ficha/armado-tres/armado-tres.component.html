@@ -1,164 +1,153 @@
+<div id="Encabezado"></div>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Armado de Ficha Paso Tres</title>
+<div id="Texto">
 
-</head>
+  <h1 class="Titulos">Armado de Ficha</h1>
 
-<div id="bg">
+  <h2 class="Titulos">Esencias:</h2>
 
-  <div id="bg_up">
+  <p>
+    las Esencias pueden ser de 9 tipos diferentes y son la funete de magia
+    que utilizan los arcanos para realizar sus ataques.<br>
+    Cada Esencia es donde se reúnen magias que comparten ciertas características o que comparten<br>
+    algún tipo de origen y conexión entre ellas.<br>
+    Al comienzo inicio se te entregaran 5 puntos a repartir, y recuerda que no se pueden superar los
+    2 puntos en una misma esencia al comienzo.
+  </p>
 
-    <div id="Encabezado"></div>
+  <label>Puntos Restantes:</label><label>{{armadoTresService.pEsencia}}</label>
 
-    <div id="Texto">
+  <br>
 
-      <h1 class="Titulos">Armado de Ficha</h1>
-
-      <h2 class="Titulos">Esencias:</h2>
-
-      <p>
-        las Esencias pueden ser de 9 tipos diferentes y son la funete de magia
-        que utilizan los arcanos para realizar sus ataques.<br>
-        Cada Esencia es donde se reúnen magias que comparten ciertas características o que comparten<br>
-        algún tipo de origen y conexión entre ellas.<br>
-        Al comienzo inicio se te entregaran 5 puntos a repartir, y recuerda que no se pueden superar los
-        2 puntos en una misma esencia al comienzo.
-      </p>
-
-      <label>Puntos Restantes:</label><label>{{armadoTresService.pEsencia}}</label>
-
-      <br>
-
-      <a>
-        <button class="BotonGeneral">Fortaleza</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[0].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarFortaleza(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarFortaleza(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Fortaleza</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[0].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarFortaleza(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarFortaleza(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Apoyo</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[1].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarApoyo(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarApoyo(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Apoyo</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[1].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarApoyo(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarApoyo(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Control</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[2].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarControl(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarControl(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Control</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[2].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarControl(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarControl(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Cuerpo</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[3].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarCuerpo(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarCuerpo(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Cuerpo</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[3].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarCuerpo(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarCuerpo(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Daño</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[4].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarDanio(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarDanio(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Daño</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[4].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarDanio(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarDanio(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Elementalismo</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[5].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarElementalismo(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarElementalismo(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Elementalismo</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[5].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarElementalismo(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarElementalismo(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Invocacion</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[6].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarInvocacion(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarInvocacion(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Invocacion</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[6].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarInvocacion(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarInvocacion(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral">Mente</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[7].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarMente(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarMente(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral">Mente</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[7].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarMente(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarMente(-1)" class="Resta"> -</button>
+  <br>
 
 
-      <a>
-        <button class="BotonGeneral"> Sagacidad</button>
-      </a>
-      <label>  {{armadoTresService.prEsencias[8].puntos}}</label><label> /5 </label>
-      <button (click)="armadoTresService.ModificarSagacidad(+1)" class="Suma"> -</button>
-      <button (click)="armadoTresService.ModificarSagacidad(-1)" class="Resta"> -</button>
-      <br>
+  <a>
+    <button class="BotonGeneral"> Sagacidad</button>
+  </a>
+  <label>  {{armadoTresService.prEsencias[8].puntos}}</label><label> /5 </label>
+  <button (click)="armadoTresService.ModificarSagacidad(+1)" class="Suma"> -</button>
+  <button (click)="armadoTresService.ModificarSagacidad(-1)" class="Resta"> -</button>
+  <br>
 
-      <h2 class="Titulos">Magias:</h2>
+  <h2 class="Titulos">Magias:</h2>
 
-      <p class="DescripcionMagias">
-        Las Magias son las herramientas de los personajes para poder combatir e interactuar con el nuevo
-        mundo que los rodea. Como ya hemmos visto en Esencias, estas cumplen diferentes roles,
-        que van desde el control de masas, aumentar el daño, invocar ordas que combatan por ti,
-        o inclusive si lo prefieres abocarte al apoyo y cobertura de tus aliados.
-        <br>
-        <br>
-        Las Magias se dividen en 4 niveles, que van desde el nivel uno, que son las mas Magias más basicas,
-        con una Efectividad de 4 y efectos bajos, estas van escalando hasta llegar al nivel 4,
-        las cuales son las mas poderosas, con efectos abrumadores y una Efectividad de 10 o 12 en algunos casos.
-        La Efectividad son los dados que lanzara el jugador para determinar la potencia, durabilidad,
-        efecto desu magia, esto va a bariar dependiendo de cada una de las magias y esta detallado en cada una de ellas.
-        <br>
-        <br>
-        Las Magias tienen una cantidad de usos máxima, de 5 usos, los cuales podrán utilizarse como
-        habilidades únicas o consumirse como usos extra para potenciar la magia.
-        Los usos iniciales son de 10 usos a repartir en las Magias que deseen, los usos, como ya dijimos,
-        maximos que puede tener una magia son de 5 y al nivel 0 no puede superar los 2 usos y
-        solo se pueden eleguir magias de nivel 1.Como con las habilidades, las magias estan sujetas a su Esencia,
-        por lo tanto les recomendamos volver a revisar el apartado de esencias, y eleguir las magias que mas le
-        convengan.
-        Recuerden que si poseen una magia de una esencia que carecen no la podran utilizar.
-      </p>
+  <p class="DescripcionMagias">
+    Las Magias son las herramientas de los personajes para poder combatir e interactuar con el nuevo
+    mundo que los rodea. Como ya hemmos visto en Esencias, estas cumplen diferentes roles,
+    que van desde el control de masas, aumentar el daño, invocar ordas que combatan por ti,
+    o inclusive si lo prefieres abocarte al apoyo y cobertura de tus aliados.
+    <br>
+    <br>
+    Las Magias se dividen en 4 niveles, que van desde el nivel uno, que son las mas Magias más basicas,
+    con una Efectividad de 4 y efectos bajos, estas van escalando hasta llegar al nivel 4,
+    las cuales son las mas poderosas, con efectos abrumadores y una Efectividad de 10 o 12 en algunos casos.
+    La Efectividad son los dados que lanzara el jugador para determinar la potencia, durabilidad,
+    efecto desu magia, esto va a bariar dependiendo de cada una de las magias y esta detallado en cada una de ellas.
+    <br>
+    <br>
+    Las Magias tienen una cantidad de usos máxima, de 5 usos, los cuales podrán utilizarse como
+    habilidades únicas o consumirse como usos extra para potenciar la magia.
+    Los usos iniciales son de 10 usos a repartir en las Magias que deseen, los usos, como ya dijimos,
+    maximos que puede tener una magia son de 5 y al nivel 0 no puede superar los 2 usos y
+    solo se pueden eleguir magias de nivel 1.Como con las habilidades, las magias estan sujetas a su Esencia,
+    por lo tanto les recomendamos volver a revisar el apartado de esencias, y eleguir las magias que mas le
+    convengan.
+    Recuerden que si poseen una magia de una esencia que carecen no la podran utilizar.
+  </p>
 
-      <app-magias-hereo></app-magias-hereo>
-      <app-selector-magias #crearSelect></app-selector-magias>
+  <app-magias-hereo></app-magias-hereo>
+  <div *ngIf="contador === 1">
+    <app-selector-magias></app-selector-magias>
+  </div>
+  <button (click)="mostrarSelec()" *ngIf="contador === 0">Agregar Habilidades</button>
 
-      <button (click)="crearSelect.agregarSelecMagia(null)">Agregar Magia</button>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div id="botones">
-        <a href="#" routerLink="/crearheroe/pasocuatro">
-          <button id="next" (click)="cargaDatosJugador()">Siguiente Paso</button>
-        </a>
-        <a href="#" routerLink="/crearheroe/pasodos">
-          <button id="back">Paso Anterior</button>
-        </a>
-        <a href="#" routerLink="/homepage">
-          <button id="homepage">Ir a Inicio</button>
-        </a>
-      </div>
-    </div>
-
-    <div id="Bg_Dawn"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="botones">
+    <a href="#" routerLink="/crearheroe/pasocuatro">
+      <button (click)="cargaDatosJugador()" id="next">Siguiente Paso</button>
+    </a>
+    <a href="#" routerLink="/crearheroe/pasodos">
+      <button id="back">Paso Anterior</button>
+    </a>
+    <a href="#" routerLink="/homepage">
+      <button id="homepage">Ir a Inicio</button>
+    </a>
   </div>
 </div>
+
+<div id="Bg_Dawn"></div>

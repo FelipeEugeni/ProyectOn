@@ -9,6 +9,7 @@ import {MagiasService} from "./magias/service/magias.service";
   styleUrls: ['./armado-tres.component.css']
 })
 export class ArmadoTresComponent implements OnInit {
+  public contador: number = 0;
 
   constructor(
     public armadoTresService: ArmadoTresService,
@@ -19,7 +20,16 @@ export class ArmadoTresComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public cargaDatosJugador(): void{
+
+  public mostrarSelec(): void {
+    if (this.armadoTresService.pEsencia != 5) {
+      this.contador = this.contador + 1;
+    } else {
+      alert('Debe Seleccionar Una Esencia Primero')
+    }
+  }
+
+  public cargaDatosJugador(): void {
     this.datosJugadorService.esenciasJugador = this.armadoTresService.prEsencias;
     this.datosJugadorService.magiasJugador = this.magiasService.magiasHereo;
   }

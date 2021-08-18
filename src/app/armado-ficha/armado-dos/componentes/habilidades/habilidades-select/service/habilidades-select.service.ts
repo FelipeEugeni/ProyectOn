@@ -1,24 +1,29 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Estadistica, Habilidad} from "../../../../../../shared/interface/interface-armado";
 import {ArmadoDosService} from "../../../../service/armado-dos.service";
+import {HabilidadesService} from "../../service/habilidades.service";
+
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadesSelectService {
+  public pHabilidad: number = 20;
+  public estadisticas: Estadistica[];
+  public habilidadesHereo: Habilidad[];
   private habilidades: Habilidad[] = [
     {
-      titulo: "Utilizar armas mágicas y efectos.",
+      titulo: "Utilizar objetoPrimaro mágicas y efectos.",
       nombre: "Armas mágicas",
       skillId: 1,
-      statId:1,
+      statId: 1,
       siglasStat: 'ARC',
       puntos: 0,
     },
     {
-      titulo: "Regenera usos de una Magia.",
+      titulo: "Regenera durabilidad de una Magia.",
       nombre: "Meditacion",
       skillId: 2,
-      statId:1,
+      statId: 1,
       siglasStat: 'ARC',
       puntos: 0,
     },
@@ -175,10 +180,10 @@ export class HabilidadesSelectService {
       puntos: 0,
     },
     {
-      titulo: "El uso de armas que disparen algún proyectil.",
+      titulo: "El uso de objetoPrimaro que disparen algún proyectil.",
       nombre: "Armas de disparo",
       skillId: 1,
-      statId:4,
+      statId: 4,
       siglasStat: 'DES',
       puntos: 0,
     },
@@ -239,26 +244,26 @@ export class HabilidadesSelectService {
       puntos: 0,
     },
     {
-      titulo: "Uso de armas chicas, faciles de ocultar y manejar.",
+      titulo: "Uso de objetoPrimaro chicas, faciles de ocultar y manejar.",
       nombre: "Armas ligeras",
       skillId: 2,
-      statId:5,
+      statId: 5,
       siglasStat: 'FUE',
       puntos: 0,
     },
     {
-      titulo: "Uso de armas que requieren de una mano o las dos.",
+      titulo: "Uso de objetoPrimaro que requieren de una mano o las dos.",
       nombre: "Armas medias",
       skillId: 3,
-      statId:5,
+      statId: 5,
       siglasStat: 'FUE',
       puntos: 0,
     },
     {
-      titulo: "Uso de armas que requieren de dos manos.",
+      titulo: "Uso de objetoPrimaro que requieren de dos manos.",
       nombre: "Armas pesadas",
       skillId: 4,
-      statId:5,
+      statId: 5,
       siglasStat: 'FUE',
       puntos: 0,
     },
@@ -415,10 +420,10 @@ export class HabilidadesSelectService {
       puntos: 0,
     },
     {
-      titulo: "Restaurar Objetos.",
+      titulo: "Restaurar objetos.",
       nombre: "Reparaciones",
       skillId: 4,
-      statId:8,
+      statId: 8,
       siglasStat: 'SAB',
       puntos: 0,
     },
@@ -497,17 +502,29 @@ export class HabilidadesSelectService {
 
 
   ];
-  public estadisticas: Estadistica[];
+
   constructor(
+    public habilidadesServicce: HabilidadesService,
     public armadoDosService: ArmadoDosService
   ) {
+    this.habilidadesHereo = this.habilidadesServicce.habilidadesHereo
     this.estadisticas = this.armadoDosService.prEtadisticas
   }
 
   getHabilidades(): Habilidad[] {
     return this.habilidades;
   }
-  getEstadisticas(): Estadistica[]{
+
+  getEstadisticas(): Estadistica[] {
     return this.estadisticas;
+  }
+
+  public puntosHabilidades(valor: number, i: number) {
+    if (this.habilidadesServicce.habilidadesHereo[i].puntos + valor <= 2 && this.habilidadesServicce.habilidadesHereo[i].puntos + valor >= 0) {
+      if (this.pHabilidad - valor <= 20 && this.pHabilidad - valor >= 0) {
+        this.habilidadesServicce.habilidadesHereo[i].puntos = this.habilidadesServicce.habilidadesHereo[i].puntos + valor;
+        this.pHabilidad = this.pHabilidad - valor;
+      }
+    }
   }
 }

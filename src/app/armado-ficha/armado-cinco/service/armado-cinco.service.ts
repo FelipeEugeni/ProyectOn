@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {ArmadoDosService} from "../../armado-dos/service/armado-dos.service";
 import {Estadistica, Modificador} from "../../../shared/interface/interface-armado";
 
@@ -100,25 +100,30 @@ public modificadores: Modificador[] = [
     this.estadisticasHereo = this.armadoDosService.prEtadisticas
   }
 public rollDeDiez(): void {
-    this.modificadores[6].dado = 0;
-  this.modificadores[6].dado = Math.floor(Math.random() * (10) + 1);
+  this.modificadores[6].dado = 0;
+  let dados: number[] = [];
+  for (let i = 0; i < this.estadisticasHereo[6].puntos; i++) {
+    dados.push(Math.floor(Math.random() * (10) + 1));
+    this.modificadores[6].dado = this.modificadores[6].dado + dados[i];
+  }
+
 }
+
   public rollDeVeinte(): void {
     this.dado1d20 = 0;
     this.dado1d20 = Math.floor(Math.random() * (20) + 1);
   }
-  public rollDeSeis(i:number): void {
+
+  public rollDeSeis(i: number): void {
     this.modificadores[i].dado = 0;
     this.modificadores[i].dado = Math.floor(Math.random() * (6) + 1);
   }
-public calcularModificadores(valor: number, i:number): void{
+
+  public calcularModificadores(valor: number, i: number): void {
     this.modificadores[i].valor = this.modificadores[i].dado + this.estadisticasHereo[valor].puntos;
-}
-  public calcularVitalidad(): void{
-    if (this.estadisticasHereo[6].puntos === 0){
-      this.modificadores[6].valor = 20 + this.dado1d20 + this.modificadores[6].dado
-    }else {
-      this.modificadores[6].valor = 20 + this.dado1d20 + (this.modificadores[6].dado* (1 + this.estadisticasHereo[6].puntos));
-    }
+  }
+
+  public calcularVitalidad(): void {
+    this.modificadores[6].valor = 20 + this.dado1d20 + this.modificadores[6].dado
   }
 }

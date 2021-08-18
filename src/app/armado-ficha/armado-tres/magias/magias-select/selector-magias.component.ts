@@ -1,5 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
+import {Component, OnInit} from '@angular/core';
 import {Esencias, Magia} from "../../../../shared/interface/interface-armado";
 import {MagiasSelectService} from "./service/magias-select.service";
 import {MagiasService} from "../service/magias.service";
@@ -10,15 +9,12 @@ import {MagiasService} from "../service/magias.service";
   styleUrls: ['./selector-magias.component.css']
 })
 export class SelectorMagiasComponent implements OnInit {
-  @ViewChild('crearSelect') tampleat: ElementRef;
-  public container: NgbModalRef;
   public esenciaid: Esencias[];
   public esenciaCarga: number = 0;
   public magiaid: Magia[];
   public magiaCarga: number = 0;
 
   constructor(
-    public modal: NgbModal,
     public magiasSelecService: MagiasSelectService,
     public magiasService: MagiasService
   ) {
@@ -26,6 +22,7 @@ export class SelectorMagiasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.esenciaid = this.magiasSelecService.getEsencias().filter(item => item.puntos >= 1)
   }
 
   public selectMagias(id: number): void {
@@ -38,7 +35,7 @@ export class SelectorMagiasComponent implements OnInit {
       let bulleano: boolean = true;
       for (let i = 0; i < this.magiasService.magiasHereo.length; i++) {
         if (this.magiaid.filter(item => item.skillId == id)[0] === this.magiasService.magiasHereo[i]) {
-          alert('Ya tienes Esta Habilidad')
+          alert('Ya tienes Esta Magia')
           bulleano = false
         }
       }
@@ -48,22 +45,4 @@ export class SelectorMagiasComponent implements OnInit {
     }
   }
 
-
-  public agregarSelecMagia(selecEstado: Magia): void {
-    this.esenciaid = this.magiasSelecService.getEsencias().filter(item => item.puntos >= 1)
-    if (selecEstado == null) {
-      this.magiaid = [];
-      this.esenciaCarga = 0;
-      this.magiaCarga = 0;
-      this.container = this.modal.open(this.tampleat, {size: "lg"})
-    }
-  }
-
-  public cerrarModal(): void {
-    if (this.container === null) {
-      return;
-    }
-    this.container.close();
-    this.container = null;
-  }
 }

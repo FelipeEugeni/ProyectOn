@@ -1,11 +1,3 @@
-<ng-template #crearSelect>
-  <div class="modal-header">
-    <h4>Magias</h4>
-    <button class="close" aria-label="close" type="button" (click)="cerrarModal()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
     <select [(ngModel)]="esenciaCarga" (ngModelChange)="selectMagias($event)">
       <option [value]="0">Eleguir Estadistica</option>
       <option *ngFor="let estadistica of esenciaid" [value]="estadistica.esenciaId">
@@ -19,15 +11,4 @@
         {{habilidad.nombre}}
       </option>
     </select>
-    <h4>Lista Habilidades</h4>
-    <div *ngFor="let mostrar of magiasService.magiasHereo">
-      {{mostrar.nombre}}: {{mostrar.titulo}}
-    </div>
-  </div>
-  <div class="modal-footer">
-    <button class="close" aria-label="close" type="button" (click)="cerrarModal()">
-      <span aria-hidden="true">Aceptar</span>
-    </button>
-  </div>
 
-</ng-template>

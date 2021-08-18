@@ -1,0 +1,84 @@
+<h4>Crear Items:</h4>
+<select (ngModelChange)="selecTipo($event)" [(ngModel)]="tipoId">
+  <option [value]="0">Elige el Tipo de Objeto</option>
+  <option *ngFor="let mostrar of tipoDeObjeto" [value]="mostrar.clasificacionId">
+    {{mostrar.nombre}}
+  </option>
+</select>
+
+<select [(ngModel)]="objetoId">
+  <option [value]="0">{{tituloSelec[tipoId]}}</option>
+  <option *ngFor="let mostrar of objetos, let i = index" [value]="i">
+    {{mostrar.nombre}}
+  </option>
+</select>
+
+<select (ngModelChange)="crearObjeto(objetoId, $event)" [(ngModel)]="materialId">
+  <option [value]="0">Elegir Material</option>
+  <option *ngFor="let mostrar of materiales let ii = index" [value]="ii">
+    {{mostrar.nombre}}</option>
+</select>
+<br>
+<div *ngIf="cargarObjeto.item.objetoId != 0">
+  <table>
+    <tr>
+      <td>
+        Item: {{cargarObjeto.item.nombre}}
+      </td>
+      <td>
+        Descripcion: {{cargarObjeto.item.descripcion}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Material: {{cargarObjeto.material.nombre}}
+      </td>
+      <td>
+        Bonificacion: {{cargarObjeto.item.bonificacion}}
+      </td>
+    <tr>
+      <td>
+        Durabilidad: {{cargarObjeto.item.durabilidad + cargarObjeto.material.durabilidad}}
+      </td>
+      <td>
+        Resistencia: {{cargarObjeto.material.resistencia}}
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+<button (click)="agregarAlInventario()">Agregar Al inventario</button>
+<br>
+<br>
+<h4>Tu Inventario:</h4>
+<br>
+<div *ngFor="let mostrar of inventarioService.inventarioHeroe">
+  <table>
+    <tr>
+      <td>
+        Item: {{mostrar.item.nombre}}
+      </td>
+      <td>
+        Descripcion: {{mostrar.item.descripcion}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Material: {{mostrar.material.nombre}}
+      </td>
+      <td>
+        Bonificacion: {{mostrar.item.bonificacion}}
+      </td>
+    <tr>
+      <td>
+        Durabilidad: {{mostrar.item.durabilidad + mostrar.material.durabilidad}}
+      </td>
+      <td>
+        Resistencia: {{mostrar.material.resistencia}}
+      </td>
+    </tr>
+  </table>
+  <br>
+</div>
+<br>
