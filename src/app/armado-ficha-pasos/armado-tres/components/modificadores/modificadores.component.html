@@ -1,0 +1,72 @@
+  <br>
+  <table>
+  <tr>
+    <td>
+      <h4>Vitalidad: {{armadoCincoService.modificadores[6].valor}}</h4>
+      <button (click)="armadoCincoService.rollDeVeinte()" class="botonDadodiez btn btn-outline-primary">{{armadoCincoService.dado1d20}}</button>
+      <button (click)="armadoCincoService.rollDeDiez()" class="botonDadodiez btn btn-outline-primary">{{armadoCincoService.modificadores[6].dado}}</button>
+      <br>
+      <button (click)="armadoCincoService.calcularVitalidad()" class="botonCalculo btn btn-outline-primary">Calcular</button>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+  <table>
+    <tr>
+      <td>
+        <h4>Claridad Mental: {{armadoCincoService.modificadores[0].valor}}</h4>
+        <button (click)="armadoCincoService.rollDeSeis(0)"
+                class="botonCalculo btn btn-outline-primary">{{armadoCincoService.modificadores[0].dado}}</button>
+        <br>
+        <button (click)="armadoCincoService.calcularModificadores(5, 0)" class="botonDado btn btn-outline-primary">INT</button>
+        <button (click)="armadoCincoService.calcularModificadores(7, 0)" class="botonDado btn btn-outline-primary">SAB</button>
+      </td>
+      <td>
+        <h4>Claridad Magica: {{armadoCincoService.modificadores[1].valor}}</h4>
+        <button (click)="armadoCincoService.rollDeSeis(1)"
+                class="botonCalculo btn btn-outline-primary">{{armadoCincoService.modificadores[1].dado}}</button>
+        <br>
+        <button (click)="armadoCincoService.calcularModificadores(2,1)" class="botonCalculo btn btn-outline-primary">Carisma</button>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h4>Defenciva Fisica: {{armadoCincoService.modificadores[2].valor}}</h4>
+        <button (click)="armadoCincoService.rollDeSeis(2)"
+                class="botonCalculo btn btn-outline-primary">{{armadoCincoService.modificadores[2].dado}}</button>
+        <br>
+        <button (click)="armadoCincoService.calcularModificadores(6, 2)" class="botonCalculo btn btn-outline-primary">Resistencia</button>
+      </td>
+      <td>
+        <h4>Defenciva Magica: {{armadoCincoService.modificadores[3].valor}}</h4>
+        <button (click)="armadoCincoService.rollDeSeis(3)"
+                class="botonCalculo btn btn-outline-primary">{{armadoCincoService.modificadores[3].dado}}</button>
+        <br>
+        <button (click)="armadoCincoService.calcularModificadores(8,3)" class="botonCalculo btn btn-outline-primary">Voluntad</button>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h4>Defenciva Fisica: {{armadoCincoService.modificadores[4].valor}}</h4>
+        <button (click)="armadoCincoService.rollDeSeis(4)"
+                class="botonCalculo btn btn-outline-primary">{{armadoCincoService.modificadores[4].dado}}</button>
+        <br>
+        <button (click)="armadoCincoService.calcularModificadores(4, 4)" class="botonCalculo btn btn-outline-primary">Fuerza</button>
+      </td>
+      <td>
+        <h4>Defenciva Magica: {{armadoCincoService.modificadores[5].valor}}</h4>
+        <button (click)="armadoCincoService.rollDeSeis(5)"
+                class="botonCalculo btn btn-outline-primary">{{armadoCincoService.modificadores[5].dado}}</button>
+        <br>
+        <button (click)="armadoCincoService.calcularModificadores(0,5)" class="botonCalculo btn btn-outline-primary">Arcanismo</button>
+      </td>
+    </tr>
+  </table>
+

@@ -1,0 +1,75 @@
+  <label>Puntos Restantes:</label><label>{{estadisticasService.pEstadisticas}}</label>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/arcanismo">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Arcanismo</button>
+  </a>
+
+  <label> {{estadisticasService.prEtadisticas[0].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarArcanismo(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarArcanismo(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/astucia">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Astucia</button>
+  </a>
+  <label> {{estadisticasService.prEtadisticas[1].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarAstucia(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarAstucia(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/carisma">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Carisma</button>
+  </a>
+  <label>  {{estadisticasService.prEtadisticas[2].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarCarisma(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarCarisma(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/destreza">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Destreza</button>
+  </a>
+  <label>  {{estadisticasService.prEtadisticas[3].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarDestreza(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarDestreza(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/fuerza">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Fuerza</button>
+  </a>
+  <label>  {{estadisticasService.prEtadisticas[4].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarFuerza(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarFuerza(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/inteligencia">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Inteligencia</button>
+  </a>
+  <label> {{estadisticasService.prEtadisticas[5].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarInteligencia(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarInteligencia(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/resistencia">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Resistencia</button>
+  </a>
+  <label>  {{estadisticasService.prEtadisticas[6].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarResistencia(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarResistencia(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/sabiduria">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Sabiduría</button>
+  </a>
+  <label>  {{estadisticasService.prEtadisticas[7].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarSabiduria(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarSabiduria(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>
+
+  <a href="#" routerLink="/estadisticas/voluntad">
+    <button class="btnEsnEst btn btn-outline-primary mr-2">Voluntad</button>
+  </a>
+  <label>  {{estadisticasService.prEtadisticas[8].puntos}}</label><label> /5 </label>
+  <button (click)="estadisticasService.ModificarVoluntad(+1)" class="btnSumaResta btn btn-outline-primary mr-2">+</button>
+  <button (click)="estadisticasService.ModificarVoluntad(-1)" class="btnSumaResta btn btn-outline-primary mr-2">-</button>
+  <br>

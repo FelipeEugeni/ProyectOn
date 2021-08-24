@@ -1,0 +1,95 @@
+<div id="Encabezado"></div>
+
+<div id="Texto">
+
+  <h1 class="Titulos">Armado de Ficha</h1>
+
+  <div class="texto">
+
+    <h2 class="Titulos">Encabezado de Ficha</h2>
+
+    <app-encabezado></app-encabezado>
+
+  </div>
+  <br>
+  <div class="texto">
+
+    <h2 class="Titulos">Estadisticas:</h2>
+
+    <app-estadisticas></app-estadisticas>
+
+    <br>
+
+  </div>
+  <br>
+  <div class="texto">
+    <label>Iniciativa: {{estadisticaService.prEtadisticas[1].puntos + estadisticaService.prEtadisticas[3].puntos}}</label>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Habilidades:</h2>
+    <div *ngIf="estadisticaService.contador === 1">
+      <app-habilidades></app-habilidades>
+    </div>
+    <button (click)="mostrarSelecHabilidades()" *ngIf="estadisticaService.contador === 0"
+            class="btn btn-outline-primary mr-2">Agregar Habilidades
+    </button>
+    <br>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Esencias:</h2>
+    <app-esencias></app-esencias>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Magias:</h2>
+    <div *ngIf="esenciasService.contador === 1">
+      <app-magias></app-magias>
+    </div>
+    <button (click)="mostrarSelecMagias()" *ngIf="esenciasService.contador === 0" class="btn btn-outline-primary">
+      Agregar Habilidades
+    </button>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Magias Menores:</h2>
+    <app-magias-menores></app-magias-menores>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Modificadores:</h2>
+    <app-modificadores></app-modificadores>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Tecnicas:</h2>
+    <app-tecnica #CrearTecnica></app-tecnica>
+    <button (click)="CrearTecnica.abrirModal(null)" class="btn btn-outline-primary">Agragar Tecnica</button>
+    <app-tecnica></app-tecnica>
+  </div>
+  <br>
+  <div class="texto">
+    <h2 class="Titulos">Inventario:</h2>
+    <br>
+    <app-inventario></app-inventario>
+  </div>
+  <div class="texto">
+    <app-historia></app-historia>
+  </div>
+  <br>
+  <br>
+
+  <div id="botones">
+    <a href="#" routerLink="">
+      <button class="btn btn-outline-primary mr-2" id="next">Cargar Ficha</button>
+    </a>
+    <a routerLink="/**">
+      <button class="btn btn-outline-primary">Inicio</button>
+    </a>
+  </div>
+
+</div>
+
+
+<div id="Bg_Dawn"></div>

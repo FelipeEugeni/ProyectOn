@@ -1,0 +1,131 @@
+<div id="Encabezado"></div>
+
+<div id="Texto">
+
+  <h1 class="Titulos">Armado de Ficha</h1>
+
+<div class="texto">
+  <h2 class="Titulos">Modificadores:</h2>
+
+  <p>
+    Los modificadores son todas esas estadísticas que pueden ir fluctuando si
+    se utilizan magias para alterar su funcionamiento normal o si se recibe
+    daño, en el caso de vitalidad. Estas se separan en 4: Vitalidad Claridad,
+    Potencia y Defensa.<br>
+    Claridad, Defensiva y Ofensiva comparten la característica de diferenciarse
+    en dos aspectos, uno mágico y otro más terrenal (mental o físico), estos
+    modificadores afectan el resultado final de las tiradas cuando son tiradas
+    enfrentadas o que tengan como objetivo a otro personaje, no en la tirada
+    per se.<br>
+  </p>
+</div>
+  <br>
+  <div class="texto">
+  <h3>Vitalidad:</h3>
+  <p>
+    Es la salud del personaje y esta tiene un máximo que se calcula
+    con la siguiente fórmula: 20 + 1d20 + (1d10 x
+    Resistencia)
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+  <h3>Claridad: </h3>
+  <p>
+    Es el Modificador que afecta a las tiradas mentales y emocionales en el aspecto mental,
+    en el caso de su aspecto mágico se encarga de magias de potenciar objetivos, de sanarlos o de
+    meterse en sus mentes.<br>
+    Claridad Magica Formula: 1d6 + Carisma<br>
+    Claridad Mental Formula: 1d6 + Inteligencia o sabiduría (elige una)
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+  <h3>Defensiva:</h3>
+  <p>
+    Es el Modificador que aumenta la efectividad de las tiradas defensivas, en las mágicas
+    suele referirse a las magias de escudos o de resistencia, y en el físico se encarga de sumarse a la
+    resistencia.<br>
+    Defensiva Magica Formula: 1d6 + Voluntad<br>
+    Defensiva Fisica Formula: 1d6 + Resistencia
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+  <h3>Ofensiva:</h3>
+  <p>
+    Es el Modificador que afecta a las tiradas ofensivas, sumándose en la potencia de una
+    magia o en la fuerza de un golpe, también se pude utilizar para empujar, cargar o cualquier tirada
+    relacionada con Fuerza.<br>
+    Ofenciva Magica Formula: 1d6 + Arcanismo<br>
+    Ofenciva Fisica Formula: 1d6 + Fuerza
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+    <h2> Calcular Modificadores</h2>
+  <app-modificadores></app-modificadores>
+</div>
+<br>
+<div class="texto">
+  <h2 class="Titulos">Tecnicas:</h2>
+
+  <p>
+    las Técnicas, son la especificación de una Habilidad, la cual sirve para mejorar en +2 al uso de la misma,
+    cuando la tecnica es aplicada.<br>
+    Cada Técnica puede afectar de una a tres Habilidades, es decir que se podrá elegir una
+    técnica que pueda afectar a más de una habilidad y todas estas se verán beneficiadas por la
+    mejora.<br>
+    Pero todas las Habilidades deben perteneser a la una unica Estadística.
+  </p>
+
+  <app-tecnica #CrearTecnica></app-tecnica>
+  <button class="btn btn-outline-primary" (click)="CrearTecnica.abrirModal(null)">Agragar Tecnica</button>
+  <app-tecnica></app-tecnica>
+</div>
+<br>
+<div class="texto">
+  <h2 class="Titulos">Inventario:</h2>
+
+  <p>
+    el Inventario, tiene dos bloques, el primero se relaciona a los objetos y sus características, mientras que el
+    segundo está dedicado al dinero.<br>
+    El primer bloque de los dos mencionados es el de los objetos, estos tienen 4 columnas en las que
+    se enlista el Objeto, ya sea con nombre propio si lo poseyera o con un nombre genérico, luego en
+    la columna de Usos se anota la cantidad de veces que este podrá ser utilizado antes de
+    descargarse o de dejar de funcionar, en el caso de que se hable de un objeto de combate se
+    hablara de la cantidad de resistencia que este tolerara antes de romperse. Si los objetos
+    presentaran alguna característica mágica, o algo muy específico esto deberá ser anotado en la
+    columna de Anotaciones del objeto, donde se la dará lugar para anotar cualquier hechizo,
+    maldición, efecto particular o interacción con la tirada que tenga un objeto. Por último nos
+    encontramos con la columna de Bonificación, esta es la que indica que bonificación añade a la
+    Efectividad final el objeto.<br>
+    El segundo bloque es más pequeño y es en el que tomaremos nota del Dinero de nuestro
+    personaje.<br>
+    Al Comenzar el Master les determinara con que objetos comenzaran, para su rapido acceso, aqui se lo dividimos en
+    4 secciones, Armamento, Armadura, Utilidades y Dinero:
+  </p>
+</div>
+  <br>
+  <div class="texto">
+  <app-inventario></app-inventario>
+</div>
+
+  <br>
+  <br>
+  <div id="botones">
+    <a href="#" routerLink="/crearheroe/pasodos">
+      <button class="btn btn-outline-primary">Paso Anterior</button>
+    </a>
+    <a href="#" routerLink="/homepage">
+      <button class="btn btn-outline-primary">Ir a Inicio</button>
+    </a>
+
+    <a href="#" routerLink="/crearheroe/pasocuatro">
+      <button class="btn btn-outline-primary">Siguiente Paso</button>
+    </a>
+  </div>
+</div>
+
+<div id="Bg_Dawn"></div>
+

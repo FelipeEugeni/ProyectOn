@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td>
+      <label class="btnEnc btn btn-outline-primary mr-2">Nombre Del Jugador: </label>
+      <input [(ngModel)]='armadoUnoService.datosPersonaje.jugador' placeholder="Introdusca Aqui" type="text">
+    </td>
+    <td>
+      <select (ngModelChange)="armadoUnoService.datosPersonaje.experiencia = $event"
+              [(ngModel)]="armadoUnoService.datosPersonaje.nivel.nivel"
+              class="btnEnc btn btn-outline-primary mr-2">
+        <option *ngFor=" let nivel of armadoUnoService.experienciaSelect" value={{nivel.exp}}>
+          Nivel: {{nivel.nivel}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label class="btnEnc btn btn-outline-primary mr-2">Nombre Del Personaje: </label>
+      <input [(ngModel)]='armadoUnoService.datosPersonaje.nombre' placeholder="Introdusca Aqui" type="text">
+    </td>
+    <td>
+      <label
+        class="btnEnc btn btn-outline-primary mr-2">Experiencia: {{armadoUnoService.datosPersonaje.experiencia}}</label>
+    </td>
+  </tr>
+</table>
+

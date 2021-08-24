@@ -35,12 +35,18 @@ export interface Magia {
   siglasEsencia: string;
   puntos: number;
 }
-
 export interface MagiaMenor {
-  condicion: string;
-  magiaMenor: string;
+  nombre: string;
+  descripcion: string;
+  bonificacion: number;
+  magiaMenorId: number;
 }
-
+export interface CondicionMenor {
+  nombre: string;
+  descripcion: string;
+  bonificacion: number;
+  condicionMenotId: number;
+}
 export interface Modificador {
   dado: any;
   nombre: string;

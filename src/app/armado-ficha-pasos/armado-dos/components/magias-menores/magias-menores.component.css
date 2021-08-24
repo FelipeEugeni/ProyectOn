@@ -1,0 +1,10 @@
+table {
+
+  text-align: left;
+  width: 100%;
+}
+
+tr, td{
+  border: solid 1px darkgrey;
+  padding: 0;
+}

@@ -1,0 +1,121 @@
+<div id="Encabezado"></div>
+
+<div id="Texto">
+
+  <h1 class="Titulos">Armado de Ficha</h1>
+
+
+  <div class="texto">
+
+  <h2 class="Titulos">Esencias:</h2>
+
+  <p>
+    las Esencias pueden ser de 9 tipos diferentes y son la funete de magia
+    que utilizan los arcanos para realizar sus ataques.<br>
+    Cada Esencia es donde se reúnen magias que comparten ciertas características o que comparten<br>
+    algún tipo de origen y conexión entre ellas.<br>
+    Al comienzo inicio se te entregaran 5 puntos a repartir, y recuerda que no se pueden superar los
+    2 puntos en una misma esencia al comienzo.
+  </p>
+
+  <app-esencias></app-esencias>
+  </div>
+  <br>
+  <div class="texto">
+  <h2 class="Titulos">Magias:</h2>
+
+  <p class="DescripcionMagias">
+    Las Magias son las herramientas de los personajes para poder combatir e interactuar con el nuevo
+    mundo que los rodea. Como ya hemmos visto en Esencias, estas cumplen diferentes roles,
+    que van desde el control de masas, aumentar el daño, invocar ordas que combatan por ti,
+    o inclusive si lo prefieres abocarte al apoyo y cobertura de tus aliados.
+    <br>
+    <br>
+    Las Magias se dividen en 4 niveles, que van desde el nivel uno, que son las mas Magias más basicas,
+    con una Efectividad de 4 y efectos bajos, estas van escalando hasta llegar al nivel 4,
+    las cuales son las mas poderosas, con efectos abrumadores y una Efectividad de 10 o 12 en algunos casos.
+    La Efectividad son los dados que lanzara el jugador para determinar la potencia, durabilidad,
+    efecto desu magia, esto va a bariar dependiendo de cada una de las magias y esta detallado en cada una de ellas.
+    <br>
+    <br>
+    Las Magias tienen una cantidad de usos máxima, de 5 usos, los cuales podrán utilizarse como
+    habilidades únicas o consumirse como usos extra para potenciar la magia.
+    Los usos iniciales son de 10 usos a repartir en las Magias que deseen, los usos, como ya dijimos,
+    maximos que puede tener una magia son de 5 y al nivel 0 no puede superar los 2 usos y
+    solo se pueden eleguir magias de nivel 1.Como con las habilidades, las magias estan sujetas a su Esencia,
+    por lo tanto les recomendamos volver a revisar el apartado de esencias, y eleguir las magias que mas le
+    convengan.
+    Recuerden que si poseen una magia de una esencia que carecen no la podran utilizar.
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+    <h2>Seleccionar Magias</h2>
+    <div *ngIf="esenciasService.contador === 1">
+    <app-magias></app-magias>
+  </div>
+  <button class="btn btn-outline-primary mr-2" (click)="mostrarSelec()" *ngIf="esenciasService.contador === 0">Agregar Magias</button>
+  </div>
+  <br>
+  <div class="texto">
+  <h2 class="Titulos">Magias Menores:</h2>
+
+  <p>
+    Las Magias menores son magias que, a pesar de tener una
+    utilidad menor que las magias propias de las Esencias, les proveen a sus usuarios de varios trucos que
+    pueden ser muy útiles y tienen un costo pequeño, un punto de Encantamiento. El Encantamiento es una
+    reserva que se llena con una Condición, o sea algo que ha de ser necesario cumplir para obtener puntos de
+    encantamiento y con estos utilizar las magias menores, ahora enlistaremos las condiciones y magias
+    menores.
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+  <h2 class="Titulos">Condición:</h2>
+
+  <p>
+    Las condiciones son los efectos que deberán cumplirse para poder obtener puntos en Encantamiento, estas
+    suelen ser bastante comunes como tener tiradas exitosas de cierto tipo de magias, activar correctamente
+    una esencia o algo mas especifico y siempre la cantidad de puntos obtenidos por la condición será de 1.
+    Las condiciones son en esencia 2:
+    -Tirada exitosa en la Esencia (elegir una de las 9)
+    -Tirada exitosa en un Tipo de magia
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+  <h2 class="Titulos">Características:</h2>
+
+  <p>
+    -Las magias menores pueden ser de cualquier tipo, pero pueden usarse una vez por turno como máximo.<br>
+    -Su uso no quita acciones.<br>
+    -Un mismo objetivo u objeto no puede verse bonificado por dos magias menores hasta que termine el<br>
+    efecto anterior, de lo contrario solo se removería el primer efecto y se consumirán ambos puntos de
+    Encantamiento.<br>
+    -Tienen una potencia de 2, ya sea ofensiva o defensiva, en algunos casos no existe una bonificación
+    especifica.<br>
+    -Sus efectos solo duran una acción.
+  </p>
+  </div>
+  <br>
+  <div class="texto">
+    <h2>Seleccionar Magias Menores:</h2>
+<app-magias-menores></app-magias-menores>
+  </div>
+
+  <br>
+  <br>
+  <div id="botones">
+    <a href="#" routerLink="/crearheroe/pasouno">
+      <button class="btn btn-outline-primary mr-2"  id="back">Paso Anterior</button>
+    </a>
+    <a href="#" routerLink="/homepage">
+      <button class="btn btn-outline-primary mr-2"  id="homepage">Ir a Inicio</button>
+    </a>
+      <a href="#" routerLink="/crearheroe/pasotres">
+    <button class="btn btn-outline-primary mr-2" (click)="cargaDatosJugador()" id="next">Siguiente Paso</button>
+  </a>
+  </div>
+</div>
+
+<div id="Bg_Dawn"></div>

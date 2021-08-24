@@ -1,0 +1,32 @@
+#Encabezado {
+  height: 100px;
+}
+
+#Bg_Dawn {
+  height: 297px;
+  width: 1920px;
+
+}
+
+#Texto {
+  height: 50%;
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.texto {
+  width: 100%;
+  border: #007bff 2px solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+h1 {
+  text-align: center;
+}
+
+#botones {
+  text-align: center;
+}
+

@@ -1,8 +1,0 @@
-<div *ngFor="let data of crearTecnicaService.tecnicasHereo, let i = index">
-  <label>{{crearTecnicaService.tecnicasHereo[i].nombre}}</label>
-  <ul>
-    <li *ngFor="let data of crearTecnicaService.tecnicasHereo[i].habilidades, let ii = index">
-      {{crearTecnicaService.tecnicasHereo[i].habilidades[ii].nombre}} + {{crearTecnicaService.tecnicasHereo[i].bonificacion}}
-    </li>
-  </ul>
-</div>

@@ -1,0 +1,47 @@
+<select class="btn btn-outline-primary mr-2" [(ngModel)]="condicionId" (ngModelChange)="selectCondicion($event)">
+  <option [value]="0">Elegir Condicion</option>
+  <option *ngFor="let condicion of magiasMenoresService.condicionesMenores, let i = index"
+          [value]="i">
+    {{condicion.nombre}}
+  </option>
+</select>
+
+<select class="btn btn-outline-primary mr-2" [(ngModel)]="magiaMenorId" (ngModelChange)="selectMagias($event)">
+  <option [value]="0">Elegir Magia Menor</option>
+  <option title="{{magia.descripcion}}" *ngFor="let magia of magiasMenoresService.magiasMenores, let i = index"
+          [value]="i">
+    {{magia.nombre}}
+  </option>
+</select>
+<div *ngIf="magiasMenoresService.contador != 0">
+<br>
+<table>
+  <tr>
+    <td>
+      {{this.magiasMenoresService.condicionMenorHereo.nombre}}
+    </td>
+    <td>
+      {{this.magiasMenoresService.condicionMenorHereo.descripcion}}
+    </td>
+  </tr>
+</table>
+<br>
+<div *ngFor="let mostrar of magiasMenoresService.magiasMenoresHereo">
+  <table>
+    <tr>
+      <td>
+        Magia Menor: {{mostrar.nombre}}
+      </td>
+      <td>
+        Bonificacion: {{mostrar.bonificacion}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Descripcion: {{mostrar.descripcion}}
+      </td>
+    </tr>
+  </table>
+  <br>
+</div>
+</div>
